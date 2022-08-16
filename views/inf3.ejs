@@ -28,6 +28,21 @@
         overflow-y: hidden;
         transition:0.01s;
       }
+      #contentczech{
+        height:0;
+        overflow-y: hidden;
+        transition:0.01s;
+      }
+      #contentbelgium{
+        height:0;
+        overflow-y: hidden;
+        transition:0.01s;
+      }
+      #contentnether{
+        height:0;
+        overflow-y: hidden;
+        transition:0.01s;
+      }
     </style>
   </head>
   <body>
@@ -57,27 +72,154 @@
             <div id="children2">
               <div id="germany" class="select">독일</div>
                 <div id="contentgermany">
-                  <div id="childrengermany">
+                  <div class ="plus" id="childrengermany">
+                    <div>벡스(Beck's)</div>
+                    <div>파울라너(Paulaner)</div>
+                    <div>바이엔슈테판(Weihenstephan)</div>
+                    <div>외팅어(Oettinger)</div>
+                    <div>에어딩어(erdinger)</div>
+                    <div>크롬바허(Krombacher)</div>
+                    <div>바슈타이너(Warsteiner)</div>
+                    <div>뢰벤브로이(Löwenbräu)</div>
+                    <div>답(DAB)</div>
+                    <div>디벨스 알트(Diebels Alt)</div>
+                    <div>비트부어거(Bitburger)</div>
+                    <div>슈나이더(Schineider)</div>
+                    <div>슈무커(Schmucker)</div>
                   </div>
                 </div>
               <div id="czech" class="select">체코</div>
+                <div id="contentczech">
+                  <div class ="plus" id="childrenczech">
+                    <div>필스너 우르켈(Pilsner Urquell)</div>
+                    <div>코젤(Kozel)</div>
+                    <div>스타로프라멘(Staropramen)</div>
+                  </div>
+                </div>
               <div id="belgium" class="select">벨기에</div>
+              <div id="contentbelgium">
+                <div id="childrenbelgium">
+                  <div>스텔라 아르투아 (Stella Artois)</div>
+                  <div>호가든 (Hoegaarden)</div>
+                  <div>레페 (Leffe)</div>
+                  <div>듀벨 (Duvel)</div>
+                  <div>주필러 (Jupiler)</div>
+                  <div>블랑슈 드 브뤼셀 (Blanche De Bruxelles)</div>
+                </div>
+              </div>
               <div id="nether" class="select">네덜란드</div>
+              <div id="contentnether">
+                <div id="childrennether">
+                  <div>하이네켄(Heineken)</div>
+                  <div>그롤쉬(Grolsch)</div>
+                  <div>데스페라도스(Desperados)</div>
+                  <div>로얄 더치(Royal Dutch)</div>
+                </div>
+              </div>
               <div id="Ire" class="select">아일랜드</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
               <div id="" class="select">영국</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">덴마크</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">불가리아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">러시아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">라트비아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">리투아니아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">리히텐슈타인</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">룩셈부르크</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">루마니아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">세르비아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">스위스</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">스페인</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">슬로바키아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">오스트리아</div>
+              <div id="content">
+                <div id="children">
+
+                </div>
+              </div>
+
               <div id="" class="select">아이슬란드</div>
               <div id="" class="select">알바니아</div>
               <div id="" class="select">우크라이나</div>
@@ -119,9 +261,11 @@
     </div>
 
   <script>
+    var plus = $(".plus").children().length
+    var count = $(".cm").height()
+
     $("#menu1").click(function(){
       if($("#content1").css("height") == 0+"px"){
-        var count = $(".cm").height()
         var size = $("#children1").children().length
           $("#content1").css("height", count * size);
       } else {
@@ -130,20 +274,26 @@
   })
     $("#menu2").click(function(){
       if($("#content2").css("height") == 0+"px"){
-        var count = $(".cm").height()
         var size = $("#children2").children().length
-          $("#content2").css("height", count * size);
+          $("#content2").css("height", (count+plus) * size);
       } else {
           $("#content2").css("height", "0px");
       }
   })
     $("#germany").click(function(){
       if($("#contentgermany").css("height") == 0+"px"){
-        var count = $(".cm").height()
         var size = $("#childrengermany").children().length
           $("#contentgermany").css("height", count * size);
       } else {
           $("#contentgermany").css("height", "0px");
+      }
+  })
+    $("#czech").click(function(){
+      if($("#contentczech").css("height") == 0+"px"){
+        var size = $("#childrenczech").children().length
+          $("#contentczech").css("height", count * size);
+      } else {
+          $("#contentczech").css("height", "0px");
       }
   })
   </script>

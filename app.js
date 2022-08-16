@@ -9,7 +9,7 @@ app.get("/", (req,res)=>{
 })
 
 app.get("/info", (req,res)=>{
-    res.render('inf3');
+    res.render('inf4');
 })
 
 app.listen(port, ()=>{
