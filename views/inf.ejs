@@ -1,0 +1,170 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>맥주 정보</title>
+    <style>
+      #menu1, #menu2:hover{
+        cursor:pointer;
+      }
+
+      #content1{
+        height:0;
+        overflow-y: hidden;
+        cursor: auto;
+        transition:0.01s;
+      }
+
+      #content2{
+        height:0;
+        overflow-y: hidden;
+        cursor: auto;
+        transition:0.01s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li id="menu1">국내 맥주</li>
+          <div id="content1">
+            <ol id="children1">
+              <li class="cm">하이트 엑스트라 콜드(hite EXTRA COLD)</li>
+              <li>맥스(Max)</li>
+              <li>드라이 d</li>
+              <li>하이트 스타우트(BLACK stout)</li>
+              <li>퀸즈 에일(QUEEN'S ALE)</li>
+              <li>테라(TERRA)</li>
+              <li>더 프리미어 OB</li>
+              <li>카스(Cass)</li>
+              <li>카프리</li>
+              <li>한맥(HANMAC)</li>
+              <li>클라우드(Kloud)</li>
+              <li>피츠 수퍼 클리어(Fitz Super Clear)</li>
+            </ol>
+          </div>
+      </ul>
+      <ul>
+        <li id="menu2">수입 맥주</li>
+          <div id="content2">
+            <ol id="children2">
+              <ol id="japan">일본
+                <li class="cm">기린 이치방 시보리(キリン一番搾り)</li>
+                <li>기린 라거 비어(キリンラガービール)</li>
+                <li>아사히 슈퍼 드라이(アサヒスーパードライ, Asahi Super dry)</li>
+                <li>아사히 슈퍼 드라이 블랙(アサヒパードライ ドライブラック, Asahi Super dry black)</li>
+                <li>산토리 프리미엄 몰츠(Suntory the Premium Malts)</li>
+                <li>삿포로(サッポロビール, Sapporo)</li>
+                <li>에비스(ヱビスビール, Yebisu)</li>
+              </ol>
+              <ol id="china">중국
+                <li>칭다오 맥주(青岛啤酒, Tsingtao)</li>
+                <li>하얼빈 맥주(哈尔滨啤酒, Harbin)</li>
+                <li>설화 맥주(雪花啤酒, Snow)</li>
+                <li>옌징(燕京啤酒, Yanjing)</li>
+              </ol>
+              <li>벡스(Beck's)</li>
+              <li>파울라너(Paulaner)</li>
+              <li>바이엔슈테판(Weihenstephan)</li>
+              <li>외팅어(Oettinger)</li>
+              <li>에어딩어(erdinger)</li>
+              <li>크롬바허(Krombacher)</li>
+              <li>바슈타이너(Warsteiner)</li>
+              <li>뢰벤브로이(Löwenbräu)</li>
+              <li>답(DAB)</li>
+              <li>디벨스 알트(Diebels Alt)</li>
+              <li>비트부어거(Bitburger)</li>
+              <li>슈나이더(Schineider)</li>
+              <li>슈무커(Schmucker)</li>
+              <li>버드와이저(Budweiser)</li>
+              <li>롤링락(Rolling Rock)</li>
+              <li>구스 아일랜드(Goose Island)</li>
+              <li>밀러(Miller)</li>
+              <li>블루 문(Blue Moon)</li>
+              <li>트레디셔널 라거(Traditional Lager)</li>
+              <li>새뮤얼 애덤스(Samuel Adams)</li>
+              <li>시에라 네바다 페일 에일(Sierra Nevada Pale Ale)</li>
+              <li>팻 타이어(Fat Tire)</li>
+              <li>웨스트 코스트 인디아 페일 에일(West Coast IPA)</li>
+              <li>홉 헤드 레드(Hop Head Red)</li>
+              <li>더블 스타우트(Double Stout)</li>
+              <li>라구니타스 IPA(Lagunitas IPA)</li>
+              <li>브루클린 브루어리(Brooklyn Brewery)</li>
+              <li>스트로우즈(Stroh's)</li>
+              <li>로스트 코스트(Lost Coast)</li>
+              <li>괌(Guam)</li>
+              <li>필스너 우르켈(Pilsner Urquell)</li>
+              <li>코젤(Kozel)</li>
+              <li>스타로프라멘(Staropramen)</li>
+              <li>스텔라 아르투아 (Stella Artois)</li>
+              <li>호가든 (Hoegaarden)</li>
+              <li>레페 (Leffe)</li>
+              <li>듀벨 (Duvel)</li>
+              <li>주필러 (Jupiler)</li>
+              <li>블랑슈 드 브뤼셀 (Blanche De Bruxelles)</li>
+              <li>하이네켄(Heineken)</li>
+              <li>그롤쉬(Grolsch)</li>
+              <li>데스페라도스(Desperados)</li>
+              <li>로얄 더치(Royal Dutch)</li>
+              <li>기네스(Guinness)</li>
+              <li>홉 하우스 13 라거(Hop House 13 Lager)</li>
+              <li>홉 고블린(HOBGOBLIN)</li>
+              <li>바스(Bass)</li>
+              <li>칼스버그(Carlsberg)</li>
+              <li>팍세(Faxe)</li>
+              <li>자고르카(Zagorka)</li>
+              <li>카메니차(Kamenitza)</li>
+              <li>발티카(Baltika)</li>
+              <li>졸로타야 보치카(Золотоя Бочка Zolotaya Bochka)</li>
+              <li>넵스코예(Nevskoe)</li>
+              <li>알다리스(Aldaris)</li>
+              <li>쉬비투리스(Švyturys)</li>
+              <li>우테노스(Utenos)</li>
+              <li>모젤(Mousel)</li>
+              <li>라브(LAV)</li>
+              <li>옐렌(Jelen)</li>
+              <li>에스트레야 담 바르셀로나(Estrella Damm Barcelona)</li>
+              <li>마오우 씽코 에스트레야스(Mahou Cinco Estrellas)</li>
+              <li>에델바이스 바이스비어 스노우프레시(Edelweiss Weißbier Snowfresh)</li>
+              <li>에거(Egger)</li>
+              <li>지퍼(Zipfer)</li>
+              <li>괴서(Gößer)</li>
+              <li>오타크링거(Ottakringer)</li>
+              <li>바이킹(Viking)</li>
+              <li>툴레(Thule)</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+        </ul>
+
+  <script>
+    $("#menu1").click(function(){
+      if($("#content1").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#children1").children().length
+          $("#content1").css("height", count * size);
+      } else {
+          $("#content1").css("height", "0px");
+      }
+  })
+    $("#menu2").click(function(){
+      if($("#content2").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#children2").children().length
+          $("#content2").css("height", count * size);
+      } else {
+          $("#content2").css("height", "0px");
+      }
+  })
+  </script>
+  </body>
+</html>

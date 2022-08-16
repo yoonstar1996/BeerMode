@@ -8,6 +8,10 @@ app.get("/", (req,res)=>{
     res.render('main');
 })
 
+app.get("/info", (req,res)=>{
+    res.render('inf3');
+})
+
 app.listen(port, ()=>{
     console.log("server open: ", port);
 })

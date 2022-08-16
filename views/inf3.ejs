@@ -1,0 +1,151 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>맥주 정보</title>
+    <style>
+      .select:hover{
+        cursor:pointer;
+      }
+      #content1{
+        height:0;
+        overflow-y: hidden;
+        cursor: auto;
+        transition:0.01s;
+      }
+      #content2{
+        height:0;
+        overflow-y: hidden;
+        cursor: auto;
+        transition:0.01s;
+      }
+      #contentgermany{
+        height:0;
+        overflow-y: hidden;
+        transition:0.01s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div id="menu1" class="select">국내 맥주</div>
+          <div id="content1">
+            <div id="children1">
+              <div class="cm">하이트 엑스트라 콜드(hite EXTRA COLD)</div>
+              <div>맥스(Max)</div>
+              <div>드라이 d</div>
+              <div>하이트 스타우트(BLACK stout)</div>
+              <div>퀸즈 에일(QUEEN'S ALE)</div>
+              <div>테라(TERRA)</div>
+              <div>더 프리미어 OB</div>
+              <div>카스(Cass)</div>
+              <div>카프리</div>
+              <div>한맥(HANMAC)</div>
+              <div>클라우드(Kloud)</div>
+              <div>피츠 수퍼 클리어(Fitz Super Clear)</div>
+            </div>
+          </div>
+      </div>
+      <div>
+        <div id="menu2" class="select">수입 맥주</div>
+          <div id="content2">
+            <div id="children2">
+              <div id="germany" class="select">독일</div>
+                <div id="contentgermany">
+                  <div id="childrengermany">
+                  </div>
+                </div>
+              <div id="czech" class="select">체코</div>
+              <div id="belgium" class="select">벨기에</div>
+              <div id="nether" class="select">네덜란드</div>
+              <div id="Ire" class="select">아일랜드</div>
+              <div id="" class="select">영국</div>
+              <div id="" class="select">덴마크</div>
+              <div id="" class="select">불가리아</div>
+              <div id="" class="select">러시아</div>
+              <div id="" class="select">라트비아</div>
+              <div id="" class="select">리투아니아</div>
+              <div id="" class="select">리히텐슈타인</div>
+              <div id="" class="select">룩셈부르크</div>
+              <div id="" class="select">루마니아</div>
+              <div id="" class="select">세르비아</div>
+              <div id="" class="select">스위스</div>
+              <div id="" class="select">스페인</div>
+              <div id="" class="select">슬로바키아</div>
+              <div id="" class="select">오스트리아</div>
+              <div id="" class="select">아이슬란드</div>
+              <div id="" class="select">알바니아</div>
+              <div id="" class="select">우크라이나</div>
+              <div id="" class="select">에스토니아</div>
+              <div id="" class="select">이탈리아</div>
+              <div id="" class="select">포르투갈</div>
+              <div id="" class="select">폴란드</div>
+              <div id="" class="select">프랑스</div>
+              <div id="" class="select">그리스</div>
+              <div id="" class="select">크로아티아</div>
+              <div id="" class="select">슬로베니아</div>
+              <div id="" class="select">보스니아 헤르체고비나</div>
+              <div id="" class="select">몰타</div>
+              <div id="" class="select">몰도바</div>
+              <div id="" class="select">몬테네그로</div>
+              <div id="" class="select">헝가리</div>
+              <div id="" class="select">벨라루스</div>
+              <div id="" class="select">북마케도니아</div>
+              <div id="" class="select">노르웨이</div>
+              <div id="" class="select">핀란드</div>
+              <div id="" class="select">스웨덴</div>
+              <div id="" class="select">미국</div>
+              <div id="" class="select">캐나다</div>
+              <div id="" class="select">멕시코</div>
+              <div id="" class="select">북한</div>
+              <div id="china" class="select">중국</div>
+              <div id="japan" class="select">일본</div>
+              <div id="" class="select">대만</div>
+              <div id="" class="select">몽골</div>
+              <div id="" class="select">남아시아</div>
+              <div id="" class="select">동남아시아 </div>
+              <div id="" class="select">서아시아, 중앙아시아</div>
+              <div id="" class="select">남아프리카</div>
+              <div id="" class="select">북아프리카</div>
+              <div id="" class="select">오세아니아</div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    $("#menu1").click(function(){
+      if($("#content1").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#children1").children().length
+          $("#content1").css("height", count * size);
+      } else {
+          $("#content1").css("height", "0px");
+      }
+  })
+    $("#menu2").click(function(){
+      if($("#content2").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#children2").children().length
+          $("#content2").css("height", count * size);
+      } else {
+          $("#content2").css("height", "0px");
+      }
+  })
+    $("#germany").click(function(){
+      if($("#contentgermany").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#childrengermany").children().length
+          $("#contentgermany").css("height", count * size);
+      } else {
+          $("#contentgermany").css("height", "0px");
+      }
+  })
+  </script>
+  </body>
+</html>

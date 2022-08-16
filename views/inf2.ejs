@@ -1,0 +1,143 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>맥주 정보</title>
+    <style>
+      #menu1, #menu2:hover{
+        cursor:pointer;
+      }
+
+      #content1{
+        height:0;
+        overflow-y: hidden;
+        cursor: auto;
+        transition:0.01s;
+      }
+
+      #content2{
+        height:0;
+        overflow-y: hidden;
+        cursor: auto;
+        transition:0.01s;
+      }
+
+      #contentjp{
+        height:0;
+        overflow-y: hidden;
+        cursor:auto;
+        transition:0.01s;
+      }
+      #contentch{
+        height:0;
+        overflow-y: hidden;
+        cursor:auto;
+        transition:0.01s;
+      }
+      #contentger{
+        height:0;
+        overflow-y: hidden;
+        cursor:auto;
+        transition:0.01s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div id="menu1">국내 맥주</div>
+          <div id="content1">
+            <div id="children1">
+              <div class="cm">하이트 엑스트라 콜드(hite EXTRA COLD)</div>
+              <div>맥스(Max)</div>
+              <div>드라이 d</div>
+              <div>하이트 스타우트(BLACK stout)</div>
+              <div>퀸즈 에일(QUEEN'S ALE)</div>
+              <div>테라(TERRA)</div>
+              <div>더 프리미어 OB</div>
+              <div>카스(Cass)</div>
+              <div>카프리</div>
+              <div>한맥(HANMAC)</div>
+              <div>클라우드(Kloud)</div>
+              <div>피츠 수퍼 클리어(Fitz Super Clear)</div>
+            </div>
+          </div>
+      </div>
+      <div>
+        <div id="menu2">수입 맥주</div>
+          <div id="content2">
+            <div id="children2">
+              <div class="cm" id="japan">일본</div>
+                <div id="contentjp">
+                <div class="cm">기린 이치방 시보리(キリン一番搾り)</div>
+                <div>기린 라거 비어(キリンラガービール)</div>
+                <div>아사히 슈퍼 드라이(アサヒスーパードライ, Asahi Super dry)</div>
+                <div>아사히 슈퍼 드라이 블랙(アサヒパードライ ドライブラック, Asahi Super dry black)</div>
+                <div>산토리 프리미엄 몰츠(Suntory the Premium Malts)</div>
+                <div>삿포로(サッポロビール, Sapporo)</div>
+                <div>에비스(ヱビスビール, Yebisu)</div>
+                </div>
+              <div id="china">중국</div>
+                <div id="contentch">
+                <!-- <div>칭다오 맥주(青岛啤酒, Tsingtao)</div>
+                <div>하얼빈 맥주(哈尔滨啤酒, Harbin)</div>
+                <div>설화 맥주(雪花啤酒, Snow)</div>
+                <div>옌징(燕京啤酒, Yanjing)</div> -->
+              </div>
+              <div id="ger">독일</div>
+                <div id="contentger">
+                  <div>벡스(Beck's)</div>
+                  <div>파울라너(Paulaner)</div>
+                  <div>바이엔슈테판(Weihenstephan)</div>
+                  <div>외팅어(Oettinger)</div>
+                  <div>에어딩어(erdinger)</div>
+                  <div>크롬바허(Krombacher)</div>
+                  <div>바슈타이너(Warsteiner)</div>
+                  <div>뢰벤브로이(Löwenbräu)</div>
+                  <div>답(DAB)</div>
+                  <div>디벨스 알트(Diebels Alt)</div>
+                  <div>비트부어거(Bitburger)</div>
+                  <div>슈나이더(Schineider)</div>
+                  <div>슈무커(Schmucker)</div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    $("#menu1").click(function(){
+      if($("#content1").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#children1").children().length
+          $("#content1").css("height", count * size);
+      } else {
+          $("#content1").css("height", "0px");
+      }
+  })
+    $("#menu2").click(function(){
+      if($("#content2").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#children2").children().length
+          $("#content2").css("height", count * size);
+          console.log($("#children2").children().length)
+      } else {
+          $("#content2").css("height", "0px");
+      }
+  })
+    $("#japan").click(function(){
+      if($("#contentjp").css("height") == 0+"px"){
+        var count = $(".cm").height()
+        var size = $("#contentjp").children().length
+          $("#contentjp").css("height", count * size);
+      } else {
+          $("#contentjp").css("height", "0px");
+      }
+  })
+  </script>
+  </body>
+</html>
