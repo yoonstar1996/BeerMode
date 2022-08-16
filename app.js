@@ -7,6 +7,9 @@ const port = 8000;
 app.get("/", (req,res)=>{
     res.render('main');
 })
+app.get("/mypage", (req,res)=>{
+    res.render("mypage");
+})
 
 app.listen(port, ()=>{
     console.log("server open: ", port);
