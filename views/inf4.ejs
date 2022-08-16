@@ -11,13 +11,16 @@
                 overflow-y: hidden;
                 cursor: auto;
                 transition:0.1s;
-                background-color: rgb(125, 187, 187);
+                /* background-color: rgb(125, 187, 187); */
+            }
+            .display{
+              display: flex;
             }
         </style>
     </head>
     <body>
         <div class="container">
-          <div>
+          <div class="display">
             <div class="select">국내 맥주</div>
             <div class="content">
                 <div>하이트 엑스트라 콜드(hite EXTRA COLD)</div>
@@ -61,12 +64,12 @@
                 </div>
                 <div class="select select_country">벨기에</div>
                 <div class="content">
-                    <div>스텔라 아르투아 (Stella Artois)</div>
-                    <div>호가든 (Hoegaarden)</div>
-                    <div>레페 (Leffe)</div>
-                    <div>듀벨 (Duvel)</div>
-                    <div>주필러 (Jupiler)</div>
-                    <div>블랑슈 드 브뤼셀 (Blanche De Bruxelles)</div>
+                    <div>스텔라 아르투아(Stella Artois)</div>
+                    <div>호가든(Hoegaarden)</div>
+                    <div>레페(Leffe)</div>
+                    <div>듀벨(Duvel)</div>
+                    <div>주필러(Jupiler)</div>
+                    <div>블랑슈 드 브뤼셀(Blanche De Bruxelles)</div>
                 </div>
                 <div class="select select_country">네덜란드</div>
                 <div class="content">
@@ -74,6 +77,239 @@
                     <div>그롤쉬(Grolsch)</div>
                     <div>데스페라도스(Desperados)</div>
                     <div>로얄 더치(Royal Dutch)</div>
+                </div>
+                <div class="select select_country">아일랜드</div>
+                <div class="content">
+                  <div>기네스(Guinness)</div>
+                  <div>홉 하우스 13 라거(Hop House 13 Lager)</div>
+                  <div>킬케니 아이리시 크림 에일(Kilkenny Irish Cream Ale)</div>
+                  <div>하프(Harp)</div>
+                  <div>머피스(murphys)</div>
+                  <div>비미쉬(Beamish)</div>
+                </div>
+                <div class="select select_country">영국</div>
+                <div class="content">
+                  <div>홉 고블린(HOBGOBdivN)</div>
+                  <div>바스(Bass)</div>
+                </div>
+                <div class="select select_country">덴마크</div>
+                <div class="content">
+                  <div>칼스버그(Carlsberg)</div>
+                  <div>팍세(Faxe)</div>
+                </div>
+                <div class="select select_country">불가리아</div>
+                <div class="content">
+                  <div>자고르카(Zagorka)</div>
+                  <div>카메니차(Kamenitza)</div>
+                </div>
+                <div class="select select_country">러시아</div>
+                <div class="content">
+                  <div>발티카(Baltika)</div>
+                  <div>졸로타야 보치카(Золотоя Бочка Zolotaya Bochka)</div>
+                  <div>넵스코예(Nevskoe)</div>
+                </div>
+                <div class="select select_country">라트비아</div>
+                <div class="content">
+                  <div>알다리스(Aldaris)</div>
+                </div>
+                <div class="select select_country">리투아니아</div>
+                <div class="content">
+                  <div>쉬비투리스(Švyturys)</div>
+                  <div>우테노스(Utenos)</div>
+                </div>
+                <div class="select select_country">리히텐슈타인</div>
+                <div class="content">
+                  <div>리히텐슈타이너(Liechtensteiner)</div>
+                  <div>프린첸브로이(PrinzenBräu)</div>
+                </div>
+                <div class="select select_country">룩셈부르크</div>
+                <div class="content">
+                  <div>보퍼딩(Bofferding)</div>
+                  <div>모젤(Mousel)</div>
+                </div>
+                <div class="select select_country">루마니아</div>
+                <div class="content">
+                  <div>우루소스(Ursus)</div>
+                  <div>실바(Silva)</div>
+                </div>
+                <div class="select select_country">세르비아</div>
+                <div class="content">
+                  <div>라브(LAV)</div>
+                  <div>옐렌(Jelen)</div>
+                </div>
+                <div class="select select_country">스위스</div>
+                <div class="content">
+                  <div>쉬첸가르텐(Schützengarten)</div>
+                  <div>펠트슐뢰스헨(Feldschlösschen)</div>
+                  <div>루겐브로이(RUGEN BRAU)</div>
+                </div>
+                <div class="select select_country">스페인</div>
+                <div class="content">
+                  <div>에스트레야 담 바르셀로나(Estrella Damm Barcelona)</div>
+                  <div>마오우 씽코 에스트레야스(Mahou Cinco Estrellas)</div>
+                </div>
+                <div class="select select_country">슬로바키아</div>
+                <div class="content">
+                  <div>즐라티 바잔트(Zlaty Bazant)</div>
+                  <div>사리스(Šariš)</div>
+                </div>
+                <div class="select select_country">오스트리아</div>
+                <div class="content">
+                  <div>에델바이스 바이스비어 스노우프레시(Edelweiss Weißbier Snowfresh)</div>
+                  <div>에거(Egger)</div>
+                  <div>지퍼(Zipfer)</div>
+                  <div>괴서(Gößer)</div>
+                  <div>오타크링거(Ottakringer)</div>
+                </div>
+                <div class="select select_country">아이슬란드</div>
+                <div class="content">
+                  <div>바이킹(Viking)</div>
+                  <div>툴레(Thule)</div>
+                  <div>걸(GULL)</div>
+                </div>
+                <div class="select select_country">알바니아</div>
+                <div class="content">
+                  <div>티라나(Tirana)</div>
+                  <div>코르차(KORCA)</div>
+                </div>
+                <div class="select select_country">우크라이나</div>
+                <div class="content">
+                  <div>지버트(Zibert)</div>
+                  <div>리비우스케(Lvivske)</div>
+                </div>
+                <div class="select select_country">에스토니아</div>
+                <div class="content">
+                  <div>비루(VIRU)</div>
+                  <div>퓨알라(Põhjala)</div>
+                  <div>사쿠(SAKU)</div>
+                </div>
+                <div class="select select_country">이탈리아</div>
+                <div class="content">
+                  <div>페로니(Peroni)</div>
+                  <div>비라 모레티(Birra Moretti)</div>
+                  <div>포르스트(Forst)</div>
+                </div>
+                <div class="select select_country">포르투갈</div>
+                <div class="content">
+                  <div>수페르복(Super Bock)</div>
+                  <div>사그레쉬(Sagres)</div>
+                  <div>신트라(CINTRA)</div>
+                </div>
+                <div class="select select_country">폴란드</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">프랑스</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">그리스</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">크로아티아</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">슬로베니아</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">보스니아 헤르체고비나</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">몰타</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">몰도바</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">몬테네그로</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">헝가리</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">벨라루스</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">북마케도니아</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">노르웨이</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">핀란드</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">스웨덴</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">미국</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">캐나다</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">멕시코</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">북한</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">중국</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">일본</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">대만</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">몽골</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">남아시아</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">동남아시아</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">서아시아, 중앙아시아</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">남아프리카</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">북아프리카</div>
+                <div class="content">
+                  <div></div>
+                </div>
+                <div class="select select_country">오세아니아</div>
+                <div class="content">
+                  <div></div>
                 </div>
             </div>
           </div>
