@@ -7,6 +7,11 @@ const port = 8000;
 app.get("/", (req,res)=>{
   res.render('main');
 })
+
+app.get("/main", (req,res)=>{
+    res.render('main');
+})
+
 app.get("/mypage", (req,res)=>{
   res.render("mypage");
 })
