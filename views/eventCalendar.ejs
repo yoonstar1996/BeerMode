@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>eventCalendar</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+        <!-- bootstrap 4 -->
+        
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+        <!-- fullcalendar -->
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.css' rel='stylesheet' />
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.js"></script>  
+        <!-- fullcalendar 언어 CDN -->  
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/locales-all.min.js'></script>
+        <!-- sweetalert CDN -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- 모달 사용 위한 cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js" ></script>
+
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    timeZone: 'UTC',
+                    initialView: 'dayGridMonth',
+                    height: '800px', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
+                    eventClick: function(info) {
+                        var eventObj = info.event;
+                        console.log(eventObj);
+                        if (eventObj.start){
+                            // alert('CLicked on ' + eventObj.start); <클릭시 나오게 할 수 있는 창>
+                            $('#calendar_event').modal('show');
+                            $('modal-title').html(eventObj.title);
+                        }
+                    },
+                    events:[ 
+                    // 일정 데이터 추가 , DB의 event를 가져오려면 JSON 형식으로 변환해 events에 넣어주면된다.
+                    {   
+                        title: "평창 '한여름밤의 맥주 한 잔' 알펜시아 비어가든",
+                        color : "#FFFFA1",
+                        textColor : "black",           
+                        start: '2022-06-01 00:00:00',            
+                        end: '2022-08-31 24:00:00',
+                        id : 'pc2022'                        
+                    },
+                    {            
+                        title: '부산 수제맥주페스티벌',            
+                        start: '2022-08-17',            
+                        end: '2022-08-21',
+                        color : '#C4B73B',
+                        id : 'bs2022'                           
+                    },      
+                    {            
+                        title: '2022 고양 프리미엄 맥주축제',            
+                        start: '2022-08-17',            
+                        end: '2022-08-21',
+                        color: '#6B9900',
+                        id : 'gy2022'         
+                    },      
+                    {            
+                        title: '2022 광주 Beer Fest ',            
+                        start: '2022-08-31',            
+                        end: '2022-09-05',
+                        id : 'gj2022'          
+                    },      
+                    {            
+                        title: '2022 송도 맥주축제',
+                        color : "lightblue",
+                        textColor : "black",               
+                        start: '2022-08-26',
+                        end: '2022-09-03',  
+                        id : 'sd2022'        
+                    },
+                    {
+                        title: '2022 거제 비어페스타',
+                        start: '2022-08-17',
+                        end: '2022-08-20',
+                        color: '#F29661',
+                        id : 'geo2022'
+                    },
+                    {
+                        title: '2022 제주 한잔우리술페스티벌',
+                        start: '2022-08-20',
+                        end: '2022-08-20',
+                        color: '#FFB2F5',
+                        textColor : 'black',
+                        id : 'jj2022'
+                    }
+                        
+                    ], 
+                    headerToolbar: {
+                        left: 'prev,next today',          
+                        center: 'title',          
+                        right: 'dayGridMonth,listWeek'
+                        // timeGridWeek,timeGridDay > 주단위 일단위 시간표 보려면 사용할것
+                    },
+                    editable: false, // true로 변경 시 draggable 작동 o 
+                    displayEventTime: false // 시간 표시 x
+                });
+                calendar.render();
+            });
+            
+        </script>
+        <style>
+            html, body {    
+            overflow: auto;    
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;    
+            font-size: 14px;  
+            } 
+            #calendarBox{
+                width: 80%;
+                padding-left: 15%
+            }
+            #calendar .fc-day-sun{
+            color: red;
+            }
+            #calendar .fc-day-sat{
+            color: blue;
+            }
+            .modal-body{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="calendarBox">
+            <div id="calendar"></div>
+        </div>
+        <!-- Modal -->
+    <div class="modal fade" id="calendar_event" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">세부 정보</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    행사명 : <br>
+                    일시/장소 : <br>
+                    참가비 : <br>
+                    관련링크 : <br>
+                     
+                     
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+      </div>
+    </div>
+  </div>
+
+    </body>
+</html>

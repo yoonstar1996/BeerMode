@@ -7,8 +7,8 @@ const port = 8000;
 app.get("/", (req,res)=>{
   res.render('main');
 })
-app.get("/mypage", (req,res)=>{
-  res.render("mypage");
+app.get("/eventCalendar", (req,res)=>{
+  res.render("eventCalendar");
 })
 
 app.listen(port, ()=>{
