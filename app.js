@@ -10,6 +10,10 @@ app.get("/", (req,res)=>{
 app.get("/eventCalendar", (req,res)=>{
   res.render("eventCalendar");
 })
+// 캘린더제작할때까지 사용
+app.get("/eventCalendar1", (req,res)=>{
+  res.render("calendar1");
+}) 
 
 app.listen(port, ()=>{
   console.log("server open: ", port);
