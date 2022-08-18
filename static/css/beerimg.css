@@ -17,7 +17,9 @@
     margin: 0 0 10px 0;
     height: 200px;
 }
-
+.beer__info{
+    height: 136px;
+}
 .beer__text{
     width: 80%;
 }
@@ -51,6 +53,9 @@
     .select__wrapper{
         min-width: 0;
     }
+    .select__wrapper ol{
+        padding-left: 0;
+    }
     .beer__wrapper{
         margin: 40px 0 0 70px;
     }
@@ -61,12 +66,15 @@
         max-width: 80%;
     }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:600px) {
     .select__menu{
         display: none;
     }
     .select__wrapper{
         min-width: 0;
+    }
+    .select__wrapper ol{
+        padding-left: 0;
     }
     .beer__wrapper{
         margin: 40px 0 0 70px;

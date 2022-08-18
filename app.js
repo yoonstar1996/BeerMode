@@ -13,11 +13,7 @@ app.get("/main", (req,res)=>{
 })
 
 app.get("/info", (req,res)=>{
-    res.render('inf2');
-})
-
-app.get("/main2", (req,res)=>{
-    res.render('main2');
+    res.render('info');
 })
 
 app.get("/mypage", (req,res)=>{
