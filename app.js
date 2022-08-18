@@ -24,6 +24,10 @@ app.get("/mypage", (req,res)=>{
   res.render("mypage");
 })
 
+app.get("/newpage", (req,res)=>{
+  res.render('maintwo');
+})
+
 app.listen(port, ()=>{
     console.log("server open: ", port);
 })
