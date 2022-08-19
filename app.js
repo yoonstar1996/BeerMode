@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
   res.render('main');
 })
 
+
 app.get("/main", (req, res) => {
   res.render('main');
 })
@@ -23,7 +24,6 @@ app.get("/calendar", (req,res)=>{
 app.get("/mypage", (req, res) => {
   res.render("mypage");
 })
-
 
 app.listen(port, () => {
   console.log("server open: ", port);
