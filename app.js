@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
   res.render('main');
 })
 
+
 app.get("/main", (req, res) => {
   res.render('main');
 })
@@ -16,9 +17,9 @@ app.get("/info", (req, res) => {
   res.render('inf2');
 })
 
-app.get("/main2", (req, res) => {
-  res.render('main2');
-})
+app.get("/calendar", (req,res)=>{
+  res.render("calendar1");
+}) 
 
 app.get("/mypage", (req, res) => {
   res.render("mypage");
