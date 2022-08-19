@@ -1,0 +1,151 @@
+.beer__wrapper{
+    display: flex;
+    flex-wrap: wrap; /*1차원 정렬을 여러 행으로 할 수 있다.*/
+    justify-content: left;
+    margin: 40px 0 0 200px;
+    padding: 10px 0 0 10px;
+}
+.beer__item{
+    width: 20%;
+    margin: 0 0 10px 0;
+    padding: 0 10px;
+}
+
+.beer__img{
+    max-width: 80%;
+    margin: 0 0 10px 0;
+    height: 200px;
+}
+/* .beer__info{
+    height: 100%;
+} */
+.beer__text{
+    width: 80%;
+}
+
+.beer__text--title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    height: 100%
+    /* text-align: center; */
+} 
+
+.beer__text--alchol{
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0px;
+}
+
+.beer__text--infor{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.clickinfo{
+    display: none;
+}
+@media screen and (max-width:1200px) {
+    .beer__item{
+        width: 25%;
+    }
+    
+}
+@media screen and (max-width:920px) {
+    .beer__item{
+        width: 25%;
+    }
+    .beer__text--alchol{
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0px;
+    }
+    
+}
+@media screen and (max-width:920px) {
+    .beer__item{
+        width: 25%;
+    }
+    .beer__text--alchol{
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0px;
+    }
+    
+}
+@media screen and (max-width:837px) {
+    .beer__item{
+        width: 25%;
+    }
+    .beer__text--alchol{
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0px;
+    }
+    
+}
+@media screen and (max-width:800px) {
+    .select__menu{
+        display: none;
+    }
+    .select__wrapper{
+        min-width: 0;
+    }
+    .select__wrapper ol{
+        padding-left: 0;
+    }
+    .beer__wrapper{
+        margin: 40px 0 0 70px;
+    }
+    .beer__item{
+        width: 33%;
+    }
+    .beer__img{
+        max-width: 80%;
+    }
+    .beer__text--alchol{
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width:600px) {
+    .select__menu{
+        display: none;
+    }
+    .select__wrapper{
+        min-width: 0;
+    }
+    .select__wrapper ol{
+        padding-left: 0;
+    }
+    .beer__wrapper{
+        margin: 40px 0 0 70px;
+    }
+    .beer__item{
+        width: 50%;
+    }
+    .beer__img{
+        max-width: 80%;
+    }
+    .beer__text--title{
+        font-size: 1.1rem;
+    }
+    .beer__text--alchol{
+        font-size: 0.9rem;
+        padding-top: 0px;
+    }
+    .beer__text--infor{
+        font-size: 0.9rem;
+    }
+    .beer__text--title{
+        height: 100%;
+    }
+    .information{
+        height: 100%;
+        overflow-y: hidden;
+    }
+    .clickinfo{
+        display: block;
+    }
+}

@@ -8,13 +8,12 @@ app.get("/", (req, res) => {
   res.render('main');
 })
 
-
 app.get("/main", (req, res) => {
   res.render('main');
 })
 
-app.get("/info", (req, res) => {
-  res.render('inf2');
+app.get("/info", (req,res)=>{
+    res.render('info');
 })
 
 app.get("/calendar", (req,res)=>{

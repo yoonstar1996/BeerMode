@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>비워 모두, BEER MODE!</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="/static/css/list.css" rel="stylesheet">
+    <link href="/static/css/beerimg.css" rel="stylesheet">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+        
+        a {font-family:Arial, Helvetica, sans-serif;}
+
+
+                /* @media screen and (max-width:700px) {
+                } */
+
+        .foot {
+            text-align: center;
+            align-items: center;
+            margin: auto;
+            font-size: 10px;
+            }
+        .navbar{
+            /* position: fixed; */
+            z-index: 20;
+        }
+
+        .navbar-toggler {
+            border-color: #8c8c8c;
+        }
+
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #050505;">
+        <div class="container-fluid">
+            <img src="/static/img/logo4.png" alt="" width="75" height="30" class="d-inline-block align-text-top" padding-left="5px">
+          <a class="navbar-brand" href="/main" style="color: #ffc600;" ><strong>　BEER MODE </strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/main" style="color: white;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/info" style="color: white;">one</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="diary.html" style="color: white;">two</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white;" aria-expanded="false">
+                  three
+                </a>
+                <ul class="dropdown-menu" style="color: white;">
+                  <li><a class="dropdown-item" href="profile.html">PROFILE</a></li>
+                  <li><a class="dropdown-item" href="">BLOG</a></li>
+                  <li><a class="dropdown-item" href="ilike.html">I LIKE</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <nav class="select">
+        <ul class="select__wrapper">
+            <li>
+                <button class="select__icon" onclick="beer_change('kr');">&#9733;</button>
+                <button class="select__menu" onclick="beer_change('kr');">국내 맥주</button>
+            </li>
+            <li>
+                <button class="select__icon" onclick="beer_change('ge');">&#9733;</button>
+                <button class="select__menu" onclick="beer_change('ge');">수입 맥주</button>
+            </li>
+            <ol>
+                <li>
+                    <button class="select__icon" onclick="beer_change('ge');">&#9734;</button>
+                    <button class="select__country" onclick="beer_change('ge');">독일</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('che');">&#9734;</button>
+                    <button class="select__country" onclick="beer_change('che');">체코</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('belgi');">&#9734;</button>
+                    <button class="select__country" onclick="beer_change('belgi');">벨기에</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('neder');">&#9734;</button>
+                    <button class="select__country" onclick="beer_change('neder');">네덜란드</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('Island');">&#9734;</button>
+                    <button class="select__country" onclick="beer_change('Island');">아일랜드</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('eng');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('eng');">영국</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('den');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('den');">덴마크</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('rus');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('rus');">러시아</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('swis');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('swis');">스위스</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('spain');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('spain');">스페인</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('austri');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('austri');">오스트리아</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('ice');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('ice');">아이슬란드</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('ital');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('ital');">이탈리아</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('portu');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('portu');">포르투갈</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('poland');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('poland');">폴란드</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('fran');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('fran');">프랑스</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('greec');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('greec');">그리스</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('croa');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('croa');">크로아티아</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('norw');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('norw');">노르웨이</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('pinlan');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('pinlan');">핀란드</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('swede');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('swede');">스웨덴</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('ameri');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('ameri');">미국</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('cana');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('cana');">캐나다</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('mexi');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('mexi');">멕시코</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('egy');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('egy');">이집트</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('north');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('north');">북한</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('china');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('china');">중국</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('japan');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('japan');">일본</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('taiwan');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('taiwan');">대만</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('southasia');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('southasia');">남아시아</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('eastasia');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('eastasia');">동남아시아</button>
+                </li>
+                <li>
+                    <button class="select__icon" onclick="beer_change('ase');">&#9734;</button>
+                    <button class="select__country"  onclick="beer_change('ase');">오세아니아</button>
+                </li>
+            </ol>
+        </ul>
+    </nav>
+
+    <section class="beer">
+        <div class="beer__wrapper kr">
+            <%-include("beer_item/beer_kr.ejs")%>
+        </div>
+        <div class="beer__wrapper ge d-none">
+            <%-include("beer_item/beer_ge.ejs")%>
+        </div>
+        <div class="beer__wrapper che d-none">
+            <%-include("beer_item/beer_che.ejs")%>
+        </div>
+        <div class="beer__wrapper belgi d-none">
+            <%-include("beer_item/beer_belgi.ejs")%>
+        </div>
+        <div class="beer__wrapper neder d-none">
+            <%-include("beer_item/beer_neder.ejs")%>
+        </div>
+        <div class="beer__wrapper Island d-none">
+            <%-include("beer_item/beer_Island.ejs")%>
+        </div>
+        <div class="beer__wrapper eng d-none">
+            <%-include("beer_item/beer_eng.ejs")%>
+        </div>
+        <div class="beer__wrapper den d-none">
+            <%-include("beer_item/beer_den.ejs")%>
+        </div>
+        <div class="beer__wrapper rus d-none">
+            <%-include("beer_item/beer_rus.ejs")%>
+        </div>
+        <div class="beer__wrapper swis d-none">
+            <%-include("beer_item/beer_swis.ejs")%>
+        </div>
+        <div class="beer__wrapper spain d-none">
+            <%-include("beer_item/beer_spain.ejs")%>
+        </div>
+        <div class="beer__wrapper austri d-none">
+            <%-include("beer_item/beer_austri.ejs")%>
+        </div>
+        <div class="beer__wrapper ice d-none">
+            <%-include("beer_item/beer_ice.ejs")%>
+        </div>
+        <div class="beer__wrapper ital d-none">
+            <%-include("beer_item/beer_ital.ejs")%>
+        </div>
+        <div class="beer__wrapper portu d-none">
+            <%-include("beer_item/beer_portu.ejs")%>
+        </div>
+        <div class="beer__wrapper poland d-none">
+            <%-include("beer_item/beer_poland.ejs")%>
+        </div>
+        <div class="beer__wrapper fran d-none">
+            <%-include("beer_item/beer_fran.ejs")%>
+        </div>
+        <div class="beer__wrapper greec d-none">
+            <%-include("beer_item/beer_greec.ejs")%>
+        </div>
+        <div class="beer__wrapper croa d-none">
+            <%-include("beer_item/beer_croa.ejs")%>
+        </div>
+        <div class="beer__wrapper norw d-none">
+            <%-include("beer_item/beer_norw.ejs")%>
+        </div>
+        <div class="beer__wrapper pinlan d-none">
+            <%-include("beer_item/beer_pinlan.ejs")%>
+        </div>
+        <div class="beer__wrapper swede d-none">
+            <%-include("beer_item/beer_swede.ejs")%>
+        </div>
+        <div class="beer__wrapper ameri d-none">
+            <%-include("beer_item/beer_ameri.ejs")%>
+        </div>
+        <div class="beer__wrapper cana d-none">
+            <%-include("beer_item/beer_cana.ejs")%>
+        </div>
+        <div class="beer__wrapper mexi d-none">
+            <%-include("beer_item/beer_mexi.ejs")%>
+        </div>
+        <div class="beer__wrapper egy d-none">
+            <%-include("beer_item/beer_egy.ejs")%>
+        </div>
+        <div class="beer__wrapper north d-none">
+            <%-include("beer_item/beer_north.ejs")%>
+        </div>
+        <div class="beer__wrapper china d-none">
+            <%-include("beer_item/beer_china.ejs")%>
+        </div>
+        <div class="beer__wrapper japan d-none">
+            <%-include("beer_item/beer_japan.ejs")%>
+        </div>
+        <div class="beer__wrapper taiwan d-none">
+            <%-include("beer_item/beer_taiwan.ejs")%>
+        </div>
+        <div class="beer__wrapper southasia d-none">
+            <%-include("beer_item/beer_southasia.ejs")%>
+        </div>
+        <div class="beer__wrapper eastasia d-none">
+            <%-include("beer_item/beer_eastasia.ejs")%>
+        </div>
+        <div class="beer__wrapper ase d-none">
+            <%-include("beer_item/beer_ase.ejs")%>
+        </div>
+    </section>
+      <br>
+      <br>
+      <br>
+      <div class="foot"> ©2022 KDT 2nd Project / 비워 모두, BEER MODE </div>
+      <br>
+
+      <script> 
+        function beer_change(country){
+            // if(country == "kr"){
+            //     console.log(country);
+            // } else if(country == "ge") {
+            //     $(".beer__wrapper").addClass("d-none");
+            //     $(".beer__wrapper.ge").removeClass("d-none");
+            // }
+
+            $(".beer__wrapper").addClass("d-none");
+            $(".beer__wrapper."+country).removeClass("d-none");
+        }
+        
+        $(".clickinfo").click(function(){
+            // console.log(this);
+            var informationn = $(this).next("p");
+            if($(informationn).hasClass("d-none")) {
+                $(informationn).removeClass("d-none");
+            } else {
+                $(informationn).addClass("d-none");
+            }
+        })
+
+        var lastWidth = $(window).width();
+
+        $( window ).resize( function() {
+            if($(window).width() >= 600 && lastWidth < 600) {
+                $(".information").removeClass("d-none");
+            } else if ($(window).width() <= 600 && lastWidth > 600) {
+                $(".information").addClass("d-none");
+            }
+
+            lastWidth = $(window).width();
+        });
+
+
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
