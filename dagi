@@ -1,0 +1,183 @@
+[33mcommit d0c6b0f930e560b3a772ea6d47d09b3e1307026f[m[33m ([m[1;36mHEAD -> [m[1;32meventCalendar[m[33m)[m
+Author: CHOIALTH <dnjswns4545@gmail.com>
+Date:   Wed Aug 17 15:57:10 2022 +0900
+
+    eventCalendar1
+
+[33mcommit 2cc9c8e5cca0d34d6ac64239edfc3853697d8064[m
+Author: CHOIALTH <dnjswns4545@gmail.com>
+Date:   Wed Aug 17 15:48:14 2022 +0900
+
+    eventCalendar1
+
+[33mcommit e60b7705c19be4402e338aa8698e0cb44ec17644[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/eventCalendar[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 0bf80fa 8ed2971
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Wed Aug 17 14:57:07 2022 +0900
+
+    Merge pull request #7 from CHOIALTH/layout2
+    
+    project-add favicon modify/suzy
+
+[33mcommit 8ed2971bc44bdb910ce84cf06828100a997e78b6[m[33m ([m[1;31morigin/layout2[m[33m)[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Wed Aug 17 14:56:13 2022 +0900
+
+    project-add favicon modify/suzy
+
+[33mcommit 0bf80fab02b0361ef55e87157fdf136541dce167[m
+Merge: 75bae2b 6e82c78
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Wed Aug 17 14:50:29 2022 +0900
+
+    Merge pull request #6 from CHOIALTH/layout
+    
+    project-add favicon
+
+[33mcommit 6e82c78e61665f4ac3f1c20e47336b20989cea15[m[33m ([m[1;31morigin/layout[m[33m)[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Wed Aug 17 14:48:52 2022 +0900
+
+    project-add favicon/suzy
+
+[33mcommit 81d976d00b6277f0d5bc292f06513caa4e370e1f[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Wed Aug 17 14:44:02 2022 +0900
+
+    project-add favicon/suzy
+
+[33mcommit 0313829a4b33afee5358bd031a4e4af229e0fe40[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Wed Aug 17 14:42:18 2022 +0900
+
+    project-add favicon/suzy
+
+[33mcommit 75bae2b7f57199c039c6657f73aa4c29c3f63d01[m
+Merge: d3b5587 04868dd
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Wed Aug 17 14:39:10 2022 +0900
+
+    Merge pull request #5 from CHOIALTH/layout
+    
+    project-add favicon
+
+[33mcommit 04868ddbab2eb917a7f22ab5955da7941d22de26[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Wed Aug 17 14:38:11 2022 +0900
+
+    project-add favicon
+
+[33mcommit d3b5587d26efbbb52ad18d0c29c6f8b47e762271[m
+Merge: fcf75e7 7233618
+Author: JayGrit <110958755+jaydive@users.noreply.github.com>
+Date:   Wed Aug 17 00:50:08 2022 +0900
+
+    Merge pull request #4 from CHOIALTH/mypage-2
+    
+    mypage(fix link, sample img), changed indent style and solved merge conflict
+
+[33mcommit 723361853b903fe39edb2465a2f3320e606c69d5[m
+Author: slowt <slowt0425@gmail.com>
+Date:   Wed Aug 17 00:29:34 2022 +0900
+
+    fix link to mypage, sample img, changed indent style and solved merge conflict
+
+[33mcommit fcf75e7495c06d2a6333a48219e14331d9d72c3e[m
+Merge: 9662787 53cf714
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Tue Aug 16 18:39:07 2022 +0900
+
+    Merge pull request #3 from CHOIALTH/layout
+    
+    Layout
+
+[33mcommit 53cf7141c43485c5510f159f7bbb1a9aa072cfeb[m
+Merge: 91bc66d 9662787
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Tue Aug 16 18:38:57 2022 +0900
+
+    Merge branch 'main' into layout
+
+[33mcommit 91bc66db1b0c5818b311d1134d83afa0377e6e8e[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 18:34:04 2022 +0900
+
+    project-file modify-toggle color change
+
+[33mcommit 83fd058496a19638212f0f6acdb938ddeb14dbe0[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 18:31:22 2022 +0900
+
+    project-file modify-toggle color change
+
+[33mcommit 966278788a3af37a78fe671d53d763faff436308[m
+Author: slowt <slowt0425@gmail.com>
+Date:   Tue Aug 16 18:14:05 2022 +0900
+
+    connet a link - mypage
+
+[33mcommit 79de435ede38d509edb706fa67763d6a498341a5[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 17:11:20 2022 +0900
+
+    gitignore
+
+[33mcommit 8e80b7c585d18c7564697a809951c9737ee78556[m
+Merge: 931b9a4 abfbd1c
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Tue Aug 16 16:57:14 2022 +0900
+
+    Merge pull request #2 from CHOIALTH/layout
+    
+    Layout
+
+[33mcommit abfbd1c13aadb3dda248ae705da6ade3b6e396c2[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 16:55:34 2022 +0900
+
+    project-file upload modify2/suzy
+
+[33mcommit e9bb790885c0e67478b34b441cd496fbe9058a59[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 16:53:41 2022 +0900
+
+    project-file upload/suzy
+
+[33mcommit a5d3ecac0242dcf7c22a8f1b35c5f2f55764e368[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 16:51:11 2022 +0900
+
+    project-file upload modify/suzy
+
+[33mcommit 931b9a4909d15adfe57fd0cd332bb198f809cf3e[m
+Merge: ab0f94b d61fd87
+Author: 숮이 <110958626+suuuuuz@users.noreply.github.com>
+Date:   Tue Aug 16 15:44:10 2022 +0900
+
+    Merge pull request #1 from CHOIALTH/layout
+    
+    Layout
+
+[33mcommit d61fd874382be01728c68c1e674ba67cce14bb76[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 15:28:07 2022 +0900
+
+    0816 project-file upload/suzy
+
+[33mcommit 1115450f86c40b972fc71256f4bcc7e0d4069300[m
+Author: suuuuuz <loved_bibi@naver.com>
+Date:   Tue Aug 16 15:13:19 2022 +0900
+
+    project-file upload/suzy
+
+[33mcommit ab0f94b7192515ff36db8322fa1aef7ff8093b06[m
+Author: slowt <slowt0425@gmail.com>
+Date:   Fri Aug 12 18:55:49 2022 +0900
+
+    starting code
+
+[33mcommit e547d54448147017f2bb171c9c651ede914d8aeb[m
+Author: CHOIALTH <107077825+CHOIALTH@users.noreply.github.com>
+Date:   Fri Aug 12 17:05:30 2022 +0900
+
+    Initial commit
