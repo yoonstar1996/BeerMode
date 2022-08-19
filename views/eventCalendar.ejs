@@ -27,101 +27,48 @@
         <!-- sweetalert cdn -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+        
         <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function () {
+           document.addEventListener('DOMContentLoaded', function () {
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     themeSystem: 'bootstrap5',
                     timeZone: 'UTC',
                     initialView: 'dayGridMonth',
-                    height: '800px', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
-                    eventClick: function(event) {
-                        var eclass = calEvent.class;
-                        console.log(eclass);
-                        swal.fire({
-                            title: event.title,
-                            text : "행사명 : <br/>행사내용 : 국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)<br/>참가비 : 대인 35,000원, 소인 9,000원"+moment(calEvent.start),
-                            icon : "success"            
-                            });
-                        if(eclass == "pc2022"){
-                            swal.fire({
-                            title: event.title,
-                            text : "행사명 : <br/>행사내용 : 국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)<br/>참가비 : 대인 35,000원, 소인 9,000원"+moment(calEvent.start),
-                            icon : "success"            
-                            });
-                            }
-                            else if(eclass == "bs2022"){
-                            }
-                            else if(eclass == "gy2022"){
-                            swal.fire({
-                            title: calEvent.title,
-                            html : "대인 35,000원, 소인 9,000원",
-                            icon : "success"            
-                            });}
-                            else if(eclass == "gj2022"){
-                            $('#calendar_event3').modal('show')    
-                            }
-                            else if(eclass == "sd2022"){
-                            $('#calendar_event4').modal('show')    
-                            }
-                            else if(eclass == "geo2022"){
-                            $('#calendar_event5').modal('show')
-                            }
-                            else if(eclass == "jj2022"){
-                            $('#calendar_event6').modal('show')
-                            }
-                        // swal.fire({
-                        //     title: calEvent.title,
-                        //     html : "행사명 : 평창 '한여름밤의 맥주 한 잔' 알펜시아 비어가든 <br/>행사내용 : 국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)<br/>참가비 : 대인 35,000원, 소인 9,000원",
-                        //     icon : "success"
-            
-                        // });
+                    height: '800px', 
+                    eventClick: function(info){
+                        var eventObj = info.event;
                     
-
-
-
-
-
-
-
-
-                    // eventClick: function(info){
-                    //     var eventObj = info.event;
-                    //     var eclass = info.event.class;
-                    //     var title = info.event.title;
-                    //     var place = info.event.place;
-                    //     var about = info.event.about;
-                    //     var fee = info.event.fee;
-                    //     var link = info.event.link;
-                    //     // alert(info.event.title + info.event.place)
-
-                    //     console.log(eventObj);
-                    //     if (eventObj.start){
-                    //         if(eclass = "bs2022"){
-                    //             $('#calendar_event1').modal('show')}
-                    //             else if(eclass == "gy2022"){
-                    //             $('#calendar_event2').modal('show')
-                    //             }
-                    //             else if(eclass == "gj2022"){
-                    //             $('#calendar_event3').modal('show')    
-                    //             }
-                    //             else if(eclass == "sd2022"){
-                    //             $('#calendar_event4').modal('show')    
-                    //             }
-                    //             else if(eclass == "geo2022"){
-                    //             $('#calendar_event5').modal('show')
-                    //             }
-                    //             else if(eclass == "jj2022"){
-                    //             $('#calendar_event6').modal('show')
-                    //             }
-
-                    //         }
-                            // alert('CLicked on ' + eventObj.start); <클릭시 나오게 할 수 있는 창>
-                            // $('#calendar_event').modal('show');
-                            // $()
-                            // $('modal-title').html(eventObj.title);
+                        console.log(eventObj.extendedProps);
                         
+                            if(eventObj.extendedProps.class == "pc2022"){
+                                $('#calendar_event').modal('show');    
+                            }
+                            else if(eventObj.extendedProps.class == "jj2022"){
+                                $('#calendar_event2').modal('show')
+                            }
+                            else if(eventObj.extendedProps.class == "gy2022"){
+                                $('#calendar_event3').modal('show')
+                            }
+                            else if(eventObj.extendedProps.class == "gj2022"){
+                                $('#calendar_event4').modal('show')
+                            }
+                            else if(eventObj.extendedProps.class == "sd2022"){
+                                $('#calendar_event5').modal('show')
+                            }
+                            else if(eventObj.extendedProps.class == "geo2022"){
+                                $('#calendar_event6').modal('show')
+                            }
+                            else if(eventObj.extendedProps.class == "jeju2022"){
+                                $('#calendar_event7').modal('show')
+                            }
+
+
+
+                            // $('#calendar_event').modal('show');                       
                     },
+                            // alert('CLicked on ' + eventObj.start); <클릭시 나오게 할 수 있는 창>
+
                     events: [
                     {  
                         class :'pc2022',
@@ -136,14 +83,14 @@
                         end: '2022-08-31 24:00:00'                     
                     },
                     {            
-                        class : 'bs2022',  
-                        title: '부산 수제맥주페스티벌',
+                        class : 'jj2022',  
+                        title: '전주 가맥축제',
                         place:"bexco 야외광장",
                         fee : "입장료 무료&수제맥주 및 안주 별도구입",
-                        about : "100여종의 최고급 수제맥주,무드있는 공연, 풍부한 음식",
-                        link :"http://busanbeerfestival.com/2022/index.php",           
-                        start: '2022-08-17',            
-                        end: '2022-08-21',
+                        about : "가맥문화를 만나고, 오늘 만든 맥주를 오늘 마실 수 있는 유일한 축제",
+                        link :"http://www.gamaek.co.kr/",           
+                        start: '2022-08-11',            
+                        end: '2022-08-13',
                         textColor : "black",
                         color: "#ffc600"
                         // color : '#C4B73B',
@@ -203,7 +150,7 @@
                         
                     },
                     {
-                        class : 'jj2022',
+                        class : 'jeju2022',
                         title: '2022 제주 한잔우리술페스티벌',
                         place: "세화리 질그랭이센터",
                         fee : "링크 참조",
@@ -271,24 +218,18 @@
                 font-weight: bolder;
             }
             .fc-prev-button, .fc-next-button, .fc-today-button{
-                /* border-radius:; */
                 block-size: 20px;
                 height: auto;
         
             }
-            /* .modal-body{
-                font-size: 20px;
-            } */
             .fc-daygrid, .fc-daygrid-day-frame, .fc-col-header, .fc-scrollgrid-sync-inner, .fc-header-toolbar{
                 border: 1px solid black !important;
                 border-spacing: 0px 0px !important;
                 border-collapse: collapse !important;
-                /* height: auto !important; */
             }
             .fc-header-toolbar {
                 background-color: black;
                 margin-bottom:0 !important;
-                /* height: 40px; */
             }
             .fc-toolbar-chunck{
                 padding-top: 0 !important;
@@ -299,18 +240,14 @@
             .fc-col-header-cell-cushion{
                 padding : 0px !important;
             }
-            /* table, th, td{
-                border-spacing: 0px 0px !important;
-                border-collapse: collapse !important;
-            } */
         </style>
     </head>
     <body>
         <div id="calendarBox">
             <div id="calendar"></div>
         </div>
-        <!-- Modal1 -->
-    <div class="modal fade" id="calendar_event1" tabindex="-1" role="dialog">
+        <!-- Modal1-평창 -->
+    <div class="modal fade" id="calendar_event" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -321,9 +258,9 @@
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 평창 '한여름밤의 맥주 한 잔' 알펜시아 비어가든 <br>
-                    장소 : 휘닉스평창 포레스트파크 잔디광장 <br>
-                    행사내용 : 국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)  <br>
-                    참가비 : 대인 35,000원, 소인 9,000원 <br>
+                    <b>장소</b> : 휘닉스평창 포레스트파크 잔디광장 <br>
+                    <b>행사내용</b> : 국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)  <br>
+                    <b>참가비</b> : 대인 35,000원 / 소인 9,000원 <br>
                     <a href="https://phoenixhnr.co.kr/static/pyeongchang/eating/special/beer-garden" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
@@ -332,7 +269,7 @@
             </div>
         </div>
     </div>
-        <!-- Modal2 -->
+        <!-- Modal2-부산 -->
     <div class="modal fade" id="calendar_event2" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -343,11 +280,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    행사명 : <br>
-                    장소 : <br>
-                    행사내용 : <br>
-                    참가비 : <br>
-                    관련링크 : <br>
+                    <b>행사명</b> : 2022 전주 가맥축제 <br>
+                    <b>장소</b> : 전주 종합경기장 내 야구장 <br>
+                    <b>행사내용</b> : 가맥문화를 만나고, 오늘 만든 맥주를 오늘 마실 수 있는 유일한 축제<br>
+                    <b>참가비</b> : 입장료 1,000원(환경부담금)&수제맥주 및 안주 별도구입<br>
+                    <a href="http://www.gamaek.co.kr/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -355,7 +292,7 @@
             </div>
         </div>
     </div>
-        <!-- Modal3 -->    
+        <!-- Modal3-고양 -->    
     <div class="modal fade" id="calendar_event3" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -366,11 +303,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    행사명 : <br>
-                    장소 : <br>
-                    행사내용 : <br>
-                    참가비 : <br>
-                    관련링크 : <br>
+                    <b>행사명</b> : 2022 고양 프리미엄 맥주축제<br>
+                    <b>장소</b> : 일산 고양꽃전시관<br>
+                    <b>행사내용</b> : 시원한 맥주, 다채로운 공연(G-PARK, KCM, 정상수 등)<br>
+                    <b>참가비</b> : 1일권 20,000원 / 전일권 90,000원<br>
+                    <a href="https://beer-festival.kr" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -378,7 +315,7 @@
             </div>
         </div>
     </div>
-        <!-- Modal4 -->   
+        <!-- Modal4-광주 -->   
     <div class="modal fade" id="calendar_event4" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -389,11 +326,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    행사명 : <br>
-                    장소 : <br>
-                    행사내용 : <br>
-                    참가비 : <br>
-                    관련링크 : <br>
+                    <b>행사명</b> : 2022 광주 Beer Fest<br>
+                    <b>장소</b> : 김대중컨벤션센터 야외광장<br>
+                    <b>행사내용</b> : 여름 더위를 물리쳐줄 맥주, 다양한 먹거리, 광주 대표 음식<br>
+                    <b>참가비</b> : 입장료 무료<br>
+                    <a href="http://www.beerfestgwangju.com/#" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -401,7 +338,7 @@
             </div>
         </div>
     </div>
-        <!-- Modal5 -->       
+        <!-- Modal5-송도 -->       
     <div class="modal fade" id="calendar_event5" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -412,11 +349,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    행사명 : <br>
-                    장소 : <br>
-                    행사내용 : <br>
-                    참가비 : <br>
-                    관련링크 : <br>
+                    <b>행사명</b> : 2022 송도 맥주축제 <br>
+                    <b>장소</b> : 송도달빛축제공원<br>
+                    <b>행사내용</b> : 무제한 맥주과 다채로운 공연(울랄라세션,한해,미란이 등)<br>
+                    <b>참가비</b> : 현장발권 20만원 / 사전예매 15만원(본인포함 6인 입장기준)<br>
+                    <a href="http://www.songdobeer.com/beer/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -424,8 +361,8 @@
             </div>
         </div>
     </div>
-            <!-- Modal6 -->       
-    <div class="modal fade" id="calendar_event5" tabindex="-1" role="dialog">
+            <!-- Modal6-거제 -->       
+    <div class="modal fade" id="calendar_event6" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -435,11 +372,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    행사명 : <br>
-                    장소 : <br>
-                    행사내용 : <br>
-                    참가비 : <br>
-                    관련링크 : <br>
+                    <b>행사명</b> : 2022 거제 비어페스타<br>
+                    <b>장소</b> : 장승포동 수변공원<br>
+                    <b>행사내용</b> : 생맥주 무제한 그리고 초청공연<br>
+                    <b>참가비</b> : 현장발권 10,000원 / 사전예매시 9,000원<br>
+                    <a href="https://2022gbf.modoo.at/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -447,8 +384,8 @@
             </div>
         </div>
     </div>
-            <!-- Modal5 -->       
-    <div class="modal fade" id="calendar_event5" tabindex="-1" role="dialog">
+            <!-- Modal7-제주 -->       
+    <div class="modal fade" id="calendar_event7" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -458,11 +395,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    행사명 : <br>
-                    장소 : <br>
-                    행사내용 : <br>
-                    참가비 : <br>
-                    관련링크 : <br>
+                    <b>행사명</b> : 2022 제주 한잔우리술페스티벌<br>
+                    <b>장소</b> : 세화리 질그랭이센터<br>
+                    <b>행사내용</b> : 각양각색의 우리술, 플리마켓, 그리고 공연<br>
+                    <b>참가비</b> : 링크 참조<br>
+                    <a href="https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013707" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
