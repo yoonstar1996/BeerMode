@@ -85,5 +85,14 @@
     .beer__img{
         max-width: 80%;
     }
+    .beer__text--title{
+        font-size: 1.1rem;
+    }
+    .beer__text--alchol{
+        font-size: 0.9rem;
+    }
+    .beer__text--infor{
+        font-size: 0.9rem;
+    }
 }
 }
