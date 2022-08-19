@@ -27,14 +27,14 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    height: 46.1px;
+    height: 100%
     /* text-align: center; */
 } 
 
 .beer__text--alchol{
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 .beer__text--infor{
@@ -58,7 +58,7 @@
     .beer__text--alchol{
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
-        padding-top: 30px;
+        padding-top: 0px;
     }
     
 }
@@ -69,7 +69,7 @@
     .beer__text--alchol{
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
-        padding-top: 30px;
+        padding-top: 0px;
     }
     
 }
@@ -80,7 +80,7 @@
     .beer__text--alchol{
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
-        padding-top: 60px;
+        padding-top: 0px;
     }
     
 }
@@ -106,7 +106,7 @@
     .beer__text--alchol{
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
-        padding-top: 30px;
+        padding-top: 0px;
     }
 }
 @media screen and (max-width:600px) {
@@ -133,13 +133,13 @@
     }
     .beer__text--alchol{
         font-size: 0.9rem;
-        padding-top: 10px;
+        padding-top: 0px;
     }
     .beer__text--infor{
         font-size: 0.9rem;
     }
     .beer__text--title{
-        height: 69.5px;
+        height: 100%;
     }
     .information{
         height: 100%;
