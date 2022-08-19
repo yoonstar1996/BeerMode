@@ -1,34 +1,29 @@
 const express = require("express");
 const app = express();
 app.set("view engine", "ejs");
-app.use( '/static', express.static( 'static'));
+app.use('/static', express.static('static'));
 const port = 8000;
 
-app.get("/", (req,res)=>{
+app.get("/", (req, res) => {
   res.render('main');
 })
 
-app.get("/main", (req,res)=>{
-    res.render('main');
+app.get("/main", (req, res) => {
+  res.render('main');
 })
 
 app.get("/info", (req,res)=>{
-    res.render('inf2');
+    res.render('info');
 })
 
-app.get("/main2", (req,res)=>{
-    res.render('main2');
-})
+app.get("/calendar", (req,res)=>{
+  res.render("calendar1");
+}) 
 
-app.get("/mypage", (req,res)=>{
+app.get("/mypage", (req, res) => {
   res.render("mypage");
 })
 
-app.get("/newpage", (req,res)=>{
-  res.render('maintwo');
+app.listen(port, () => {
+  console.log("server open: ", port);
 })
-
-app.listen(port, ()=>{
-    console.log("server open: ", port);
-})
-
