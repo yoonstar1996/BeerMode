@@ -22,6 +22,11 @@
     background-color: #eaeaea;
 }
 
+.clickinfo{
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+}
 .select__icon{
     border: none;
     background-color: transparent;

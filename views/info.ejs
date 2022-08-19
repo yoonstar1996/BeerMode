@@ -332,7 +332,30 @@
             $(".beer__wrapper").addClass("d-none");
             $(".beer__wrapper."+country).removeClass("d-none");
         }
-    
+        
+        $(".clickinfo").click(function(){
+            // console.log(this);
+            var informationn = $(this).next("div");
+            if($(informationn).hasClass("d-none")) {
+                $(informationn).removeClass("d-none");
+            } else {
+                $(informationn).addClass("d-none");
+            }
+        })
+
+        var lastWidth = $(window).width();
+
+        $( window ).resize( function() {
+            if($(window).width() >= 600 && lastWidth < 600) {
+                $(".information").removeClass("d-none");
+            } else if ($(window).width() <= 600 && lastWidth > 600) {
+                $(".information").addClass("d-none");
+            }
+
+            lastWidth = $(window).width();
+        });
+
+
       </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
