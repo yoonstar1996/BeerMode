@@ -355,9 +355,9 @@
 
         $( window ).resize( function() {
             if($(window).width() >= 600 && lastWidth < 600) {
-                $(".information").removeClass("d-none");
+                $(".beer__text--infor").removeClass("d-none");
             } else if ($(window).width() <= 600 && lastWidth > 600) {
-                $(".information").addClass("d-none");
+                $(".beer__text--infor").addClass("d-none");
             }
 
             lastWidth = $(window).width();
