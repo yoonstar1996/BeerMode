@@ -3,7 +3,7 @@
     flex-wrap: wrap; /*1차원 정렬을 여러 행으로 할 수 있다.*/
     justify-content: left;
     margin: 40px 0 0 200px;
-    padding: 10px 0 0 10px;
+    padding: 50px 0 0 10px;
 }
 .beer__item{
     width: 20%;
