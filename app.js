@@ -17,7 +17,7 @@ app.get("/info", (req,res)=>{
 })
 
 app.get("/calendar", (req,res)=>{
-  res.render("calendar1");
+  res.render("calendar");
 }) 
 
 app.get("/mypage", (req, res) => {
