@@ -61,17 +61,73 @@
     <br>
 
     <div class="container centerLayout">
-      <div id="traceHead" class="row justify-content-between">
-        <div class="col-1 traceTitle">지금까지의 beer 궤적</div>
-        <div class="col-1 traceButton">
+      <div id="traceHead" class="row">
+        <div class="col-3"></div>
+        <div class="col traceTitle">지금까지의 beer 궤적</div>
+        <div class="col-3"></div>
+        <!-- <div class="col-1 traceButton">
           <a class="btn btn-primary" href="#" role="button">Link</a>
+        </div> -->
+      </div>
+
+      <nav class="navbar navbar-light justify-content-center mt-4">
+        <form class="form-inline">
+          <button type="button" class="btn btn-primary btn-lg mr-3" id="btnSort">a-z</button>
+          <!-- <div class="col"></div> -->
+          
+          <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Type a name" aria-label="Search"
+            id="search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">RESET</button>
+        </form>
+      </nav>
+
+      <div class="layout-margin-8 mt-4">
+        <div class="card-deck">
+  
+          <div class="card card-shadow text-center">
+            <!-- 누르면 모달형태로 사진 뜨는거 추가 ㄱㄱ -->
+            <!-- <img src="/static/img/beerimg/heineken.jpg" class="card-img-top" alt="img-thumbnail"> -->
+            <div class="card-body">
+              <h4 class="card-title">Heineken</h4>
+              <p class="card-text">★★★★☆</p>
+              <div class="dropdown-divider"></div>
+              <p class="card-text"><small class="text-muted">적당한 씁쓸한 맛과 조금 단 맛 때문인지 물리지 않고 끝까지 맛을 보며 마시기 좋다. 언제나 실패 없는 안전빵(?)</small></p>
+            </div>
+          </div>
+          <div class="card card-shadow text-center">
+            <div class="card-body">
+              <h4 class="card-title">Hoegaarden Rosee</h4>
+              <p class="card-text">★★★★★</p>
+              <div class="dropdown-divider"></div>
+              <p class="card-text"><small class="text-muted">라즈베리 향이 약간 첨가됨. 신기한 마음에 도전해 봄. 기대감이 크지 않아서 그런지 만족. 오히려 자주 먹기에는 ㅎㅎ</small></p>
+            </div>
+          </div>
+          <div class="card card-shadow text-center">
+            <div class="card-body">
+              <h4 class="card-title">Asahi</h4>
+              <p class="card-text">★★☆☆☆</p>
+              <div class="dropdown-divider"></div>
+              <p class="card-text"><small class="text-muted">기대감이 큰 상태로 맛봐서 그런지 실망이 컸던 기억이 남음. 조합을 바꿔서 언젠가 다시 도전해볼까.</small></p>
+            </div>
+          </div>
+					<div class="card card-shadow text-center">
+            <div class="card-body">
+              <h4 class="card-title">Carlsberg</h4>
+              <p class="card-text">★★★★☆</p>
+              <div class="dropdown-divider"></div>
+              <p class="card-text"><small class="text-muted">쓴 맛 싫어하는 사람들이 많이 마신다고 들었음. 가볍게 마시기에 좋았다.</small></p>
+            </div>
+          </div>
+  
         </div>
       </div>
+
+
 
       <!-- S: 카드 형태 컨버젼 -->
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-          <div class="card mb-3" style="max-width: 450px">
+          <div class="card card-shadow h-100 mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4 vstack">
                 <img src="/static/img/beerimg/heineken.jpg" class="img-fluid rounded-start" alt="...">
@@ -82,9 +138,7 @@
                 <div class="card-body">
                   <h5 class="card-title">★★★★☆</h5>
                   <p class="card-text">
-                    Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                    Phasellus consequat arcu eu neque convallis eu vulputate diam
-                    vehicula.
+                    적당한 씁쓸한 맛과 조금 단 맛 때문인지 물리지 않고 끝까지 맛을 보며 마시기 좋다. 언제나 실패 없는 안전빵(?)
                   </p>
                   <p class="card-text">
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -95,7 +149,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card mb-3" style="max-width: 450px">
+          <div class="card card-shadow h-100 mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4 vstack">
                 <img src="/static/img/beerimg/hoegaarden rosee.jpg" class="img-fluid rounded-start" alt="...">
@@ -106,12 +160,10 @@
                 <div class="card-body">
                   <h5 class="card-title">★★★★★</h5>
                   <p class="card-text">
-                    Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                    Phasellus consequat arcu eu neque convallis eu vulputate diam
-                    vehicula.
+                    라즈베리 향이 약간 첨가됨. 신기한 마음에 도전해 봄. 기대감이 크지 않아서 그런지 만족. 오히려 자주 먹기에는 ㅎㅎ
                   </p>
                   <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">Last updated 10 days ago</small>
                   </p>
                 </div>
               </div>
@@ -119,23 +171,21 @@
           </div>
         </div>
         <div class="col">
-          <div class="card mb-3" style="max-width: 450px">
+          <div class="card card-shadow h-100 mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4 vstack">
-                <img src="/static/img/beerimg/heineken.jpg" class="img-fluid rounded-start" alt="...">
-                <div class="col text-center"><a>Heineken</a></div>
+                <img src="/static/img/beerimg/asahi.jpg" class="img-fluid rounded-start" alt="...">
+                <div class="col text-center"><a>Asahi</a></div>
               </div>
               <div class="vr my-3 text-muted"></div>
               <div class="col-md-7">
                 <div class="card-body">
-                  <h5 class="card-title">★★★★☆</h5>
+                  <h5 class="card-title">★★☆☆☆</h5>
                   <p class="card-text">
-                    Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                    Phasellus consequat arcu eu neque convallis eu vulputate diam
-                    vehicula.
+                    기대감이 큰 상태로 맛봐서 그런지 실망이 컸던 기억이 남음. 조합을 바꿔서 언젠가 다시 도전해볼까.
                   </p>
                   <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">Last updated 13 days ago</small>
                   </p>
                 </div>
               </div>
@@ -143,23 +193,21 @@
           </div>
         </div>
         <div class="col">
-          <div class="card mb-3" style="max-width: 450px">
+          <div class="card card-shadow h-100 mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4 vstack">
-                <img src="/static/img/beerimg/heineken.jpg" class="img-fluid rounded-start" alt="...">
-                <div class="col text-center"><a>Heineken</a></div>
+                <img src="/static/img/beerimg/carlsberg.jpg" class="img-fluid rounded-start" alt="...">
+                <div class="col text-center"><a>Carlsberg</a></div>
               </div>
               <div class="vr my-3 text-muted"></div>
               <div class="col-md-7">
                 <div class="card-body">
                   <h5 class="card-title">★★★★☆</h5>
                   <p class="card-text">
-                    Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                    Phasellus consequat arcu eu neque convallis eu vulputate diam
-                    vehicula.
+                    쓴 맛 싫어하는 사람들이 많이 마신다고 들었음. 가볍게 마시기에 좋았다.
                   </p>
                   <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">Last updated 2 months ago</small>
                   </p>
                 </div>
               </div>
@@ -168,66 +216,133 @@
         </div>
       </div>
 
-
+      <!-- 카드 두번째 버전 -->
+      <br><br>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card h-100">
+          <div class="card card-shadow h-100">
             <img src="/static/img/beerimg/heineken.jpg" class="card-img-top" alt="img-thumbnail">
             <div class="card-body">
               <h5 class="card-title">★★★★☆</h5>
               <p class="card-text">
-                Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                Phasellus consequat arcu eu neque convallis eu vulputate diam
-                vehicula.
+                적당한 씁쓸한 맛과 조금 단 맛 때문인지 물리지 않고 끝까지 맛을 보며 마시기 좋다. 언제나 실패 없는 안전빵(?)
               </p>
             </div>
           </div>
         </div>
+
         <div class="col">
-          <div class="card h-100">
-            <img src="/static/img/beerimg/heineken.jpg" class="card-img-top" alt="img-thumbnail">
-            <div class="card-body">
-              <div class="col text-center"><a>Heineken</a></div>
-              <div class="hr"></div>
-              <h5 class="card-title text-center">★★★★☆</h5>
-              <p class="card-text">
-                Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                Phasellus consequat arcu eu neque convallis eu vulputate diam
-                vehicula.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
+          <div class="card card-shadow h-100">
             <img src="/static/img/beerimg/hoegaarden rosee.jpg" class="card-img-top" alt="img-thumbnail">
             <div class="card-body">
               <div class="col text-center"><a>Hoegaarden Rosee</a></div>
               <h5 class="card-title text-center">★★★★☆</h5>
               <p class="card-text">
-                Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                Phasellus consequat arcu eu neque convallis eu vulputate diam
-                vehicula.
+                라즈베리 향이 약간 첨가됨. 신기한 마음에 도전해 봄. 기대감이 크지 않아서 그런지 만족. 오히려 자주 먹기에는 ㅎㅎ
               </p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
-            <img src="/static/img/beerimg/hoegaarden rosee.jpg" class="card-img-top" alt="img-thumbnail">
+          <div class="card card-shadow h-100">
+            <img src="/static/img/beerimg/asahi.jpg" class="card-img-top" alt="img-thumbnail">
             <div class="card-body">
-              <div class="col text-center"><a>Hoegaarden Rosee</a></div>
+              <div class="col text-center"><a>Asahi</a></div>
               <hr>
               <h5 class="card-title text-center">★★★★☆</h5>
               <p class="card-text">
-                Praesent luctus egestas nisl, vitae vehicula eros rhoncus vel.
-                Phasellus consequat arcu eu neque convallis eu vulputate diam
-                vehicula.
+                기대감이 큰 상태로 맛봐서 그런지 실망이 컸던 기억이 남음. 조합을 바꿔서 언젠가 다시 도전해볼까.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-shadow h-100">
+            <img src="/static/img/beerimg/carlsberg.jpg" class="card-img-top" alt="img-thumbnail">
+            <div class="card-body">
+              <div class="col text-center"><a>Carlsberg</a></div>
+              <div class="hr"></div>
+              <h5 class="card-title text-center">★★★★☆</h5>
+              <p class="card-text">
+                쓴 맛 싫어하는 사람들이 많이 마신다고 들었음. 가볍게 마시기에 좋았다.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <br><br>
+      <div id="traceTable">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" class="col-2">date</th>
+              <th scope="col" class="col-3">item</th>
+              <th scope="col" class="col">my memory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2022-08-14</th>
+              <td>
+                <img src="/static/img/beerimg/heineken.jpg" class="img-thumbnail" alt="heineken img">
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">Heineken</div>
+                  <div class="col">★★★★☆</div>
+                </div>
+                <div class="row">
+                  적당한 씁쓸한 맛과 조금 단 맛 때문인지 물리지 않고 끝까지 맛을 보며 마시기 좋다. 언제나 실패 없는 안전빵(?)
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2022-08-16</th>
+              <td>
+                <img src="/static/img/beerimg/hoegaarden rosee.jpg" class="img-thumbnail" alt="hoegaarden rosee img">
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">Hoegaarden Rosee</div>
+                  <div class="col">★★★★★</div>
+                </div>
+                <div class="row">
+                  라즈베리 향이 약간 첨가됨. 신기한 마음에 도전해 봄. 기대감이 크지 않아서 그런지 만족. 오히려 자주 먹기에는 ㅎㅎ
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2022-08-14</th>
+              <td>
+                <img src="/static/img/beerimg/asahi.jpg" class="img-thumbnail" alt="asahi img">
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">Ashahi</div>
+                  <div class="col">★★★☆☆</div>
+                </div>
+                <div class="row">
+                  기대감이 큰 상태로 맛봐서 그런지 실망이 컸던 기억이 남음. 조합을 바꿔서 언젠가 다시 도전해볼까.
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2022-08-14</th>
+              <td>
+                <img src="/static/img/beerimg/carlsberg.jpg" class="img-thumbnail" alt="carlsberg img">
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col">Carlsberg</div>
+                  <div class="col">★★★☆☆</div>
+                </div>
+                <div class="row">
+                  쓴 맛 싫어하는 사람들이 많이 마신다고 들었음. 가볍게 마시기에 좋았다.
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </div>
 
 
@@ -253,6 +368,24 @@
       $("#btnTop").on("click", (e) => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       });
+    
+      // this overrides `contains` to make it case insenstive
+      jQuery.expr[':'].contains = function (a, i, m) {
+        return jQuery(a).text().toUpperCase()
+          .indexOf(m[3].toUpperCase()) >= 0;
+      };
+
+      $('#search').keyup(function () {
+        $('.card').removeClass('d-none');
+        var filter = $(this).val(); // get the value of the input, which we filter on
+        $('.card-deck').find('.card .card-body h4:not(:contains("' + filter + '"))').parent().parent().addClass('d-none');
+      })
+
+      $('#btnSort').click(function () {
+        $('.card-deck .card').sort(function (a, b) {
+          return $(a).find(".card-title").text() > $(b).find(".card-title").text() ? 1 : -1;
+        }).appendTo(".card-deck");
+      })
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
