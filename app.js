@@ -13,7 +13,7 @@ app.get("/main", (req, res) => {
 })
 
 app.get("/intro", (req,res)=>{
-  res.render("maintwo");
+  res.render("intro");
 })
 
 app.get("/info", (req,res)=>{
@@ -21,7 +21,7 @@ app.get("/info", (req,res)=>{
 })
 
 app.get("/calendar", (req,res)=>{
-  res.render("calendar");
+  res.render("calendar1");
 }) 
 
 app.get("/mypage", (req, res) => {
