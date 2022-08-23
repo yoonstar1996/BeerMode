@@ -94,8 +94,21 @@
     .select__wrapper ol{
         padding-left: 0;
     }
+    .select__mobile{
+        display: block;
+    }
+    .select__icon{
+        display: none;
+    }
+    .select__wrapper li{
+        padding:10px 0px 10px 0px;
+    }
+    .bold{
+        font-weight: bold;
+    }
     .beer__wrapper{
         margin: 40px 0 0 70px;
+        padding-left: 22px;
     }
     .beer__item{
         width: 33%;
@@ -109,7 +122,7 @@
         padding-top: 0px;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:610px) {
     .select__menu{
         display: none;
     }
@@ -119,8 +132,15 @@
     .select__wrapper ol{
         padding-left: 0;
     }
+    .select__mobile{
+        display: block;
+    }
+    .bold{
+        font-weight: bold;
+    }
     .beer__wrapper{
         margin: 40px 0 0 70px;
+        padding-left: 22px;
     }
     .beer__item{
         width: 50%;

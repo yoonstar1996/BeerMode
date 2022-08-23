@@ -31,191 +31,183 @@
             z-index: 20;
         }
 
-        .navbar-toggler {
-            border-color: #8c8c8c;
-        }
-
     </style>
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #050505;">
-        <div class="container-fluid">
-          <img src="/static/img/logo4.png" alt="" width="75" height="30" class="d-inline-block align-text-top"
-            padding-left="5px">
-          <a class="navbar-brand" href="/main" style="color: #ffc600;"><strong>　BEER MODE </strong></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/main" style="color: white;"><i
-                    class="fa fa-home"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/newpage" style="color: white;">one</a> 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/info" style="color: white;">info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/calendar1" style="color: white;">event calendar</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white;"
-                  aria-expanded="false">
-                  four
-                </a>
-                <ul class="dropdown-menu" style="color: white;">
-                  <li><a class="dropdown-item" href="profile.html">PROFILE</a></li>
-                  <li><a class="dropdown-item" href="">BLOG</a></li>
-                  <li><a class="dropdown-item" href="/mypage">USER page</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <%-include("navbar.ejs")%>
 
     <nav class="select">
         <ul class="select__wrapper">
-            <li>
-                <button class="select__icon" onclick="beer_change('kr');">&#9733;</button>
-                <button class="select__menu" onclick="beer_change('kr');">국내 맥주</button>
+            <li onclick="beer_change(this, 'kr');">
+                <button class="select__icon">&#9733;</button>
+                <button class="select__menu">국내 맥주</button>
+                <button class="select__mobile bold">국내 맥주</button>
             </li>
-            <li>
-                <button class="select__icon" onclick="beer_change('ge');">&#9733;</button>
-                <button class="select__menu" onclick="beer_change('ge');">수입 맥주</button>
+            <li  onclick="beer_change(this, 'ge');">
+                <button class="select__icon">&#9733;</button>
+                <button class="select__menu">수입 맥주</button>
+                <button class="select__mobile bold">수입 맥주</button>
             </li>
             <ol class="scrollbar">
-                <li>
-                    <button class="select__icon" onclick="beer_change('ge');">&#9734;</button>
-                    <button class="select__country" onclick="beer_change('ge');">독일</button>
+                <li  onclick="beer_change(this, 'ge');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">독일</button>
+                    <button class="select__mobile">독일</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('che');">&#9734;</button>
-                    <button class="select__country" onclick="beer_change('che');">체코</button>
+                <li onclick="beer_change(this, 'che');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">체코</button>
+                    <button class="select__mobile">체코</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('belgi');">&#9734;</button>
-                    <button class="select__country" onclick="beer_change('belgi');">벨기에</button>
+                <li  onclick="beer_change(this, 'belgi');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">벨기에</button>
+                    <button class="select__mobile">벨기에</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('neder');">&#9734;</button>
-                    <button class="select__country" onclick="beer_change('neder');">네덜란드</button>
+                <li onclick="beer_change(this, 'neder');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">네덜란드</button>
+                    <button class="select__mobile">네덜란드</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('Island');">&#9734;</button>
-                    <button class="select__country" onclick="beer_change('Island');">아일랜드</button>
+                <li onclick="beer_change(this, 'Island');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">아일랜드</button>
+                    <button class="select__mobile">아일랜드</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('eng');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('eng');">영국</button>
+                <li onclick="beer_change(this, 'eng');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">영국</button>
+                    <button class="select__mobile">영국</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('den');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('den');">덴마크</button>
+                <li onclick="beer_change(this, 'den');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">덴마크</button>
+                    <button class="select__mobile">덴마크</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('rus');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('rus');">러시아</button>
+                <li onclick="beer_change(this, 'rus');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">러시아</button>
+                    <button class="select__mobile">러시아</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('swis');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('swis');">스위스</button>
+                <li onclick="beer_change(this, 'swis');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">스위스</button>
+                    <button class="select__mobile">스위스</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('spain');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('spain');">스페인</button>
+                <li onclick="beer_change(this, 'spain');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">스페인</button>
+                    <button class="select__mobile">스페인</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('austri');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('austri');">오스트리아</button>
+                <li onclick="beer_change(this, 'spain');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">오스트리아</button>
+                    <button class="select__mobile">오스트리아</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('ice');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('ice');">아이슬란드</button>
+                <li  onclick="beer_change(this, 'ice');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">아이슬란드</button>
+                    <button class="select__mobile">아이슬란드</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('ital');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('ital');">이탈리아</button>
+                <li onclick="beer_change(this, 'ital');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">이탈리아</button>
+                    <button class="select__mobile">이탈리아</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('portu');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('portu');">포르투갈</button>
+                <li onclick="beer_change(this, 'portu');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">포르투갈</button>
+                    <button class="select__mobile">포르투갈</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('poland');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('poland');">폴란드</button>
+                <li onclick="beer_change(this, 'poland');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">폴란드</button>
+                    <button class="select__mobile">폴란드</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('fran');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('fran');">프랑스</button>
+                <li  onclick="beer_change(this, 'fran');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">프랑스</button>
+                    <button class="select__mobile">프랑스</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('greec');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('greec');">그리스</button>
+                <li onclick="beer_change(this, 'greec');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">그리스</button>
+                    <button class="select__mobile">그리스</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('croa');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('croa');">크로아티아</button>
+                <li  onclick="beer_change(this, 'croa');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">크로아티아</button>
+                    <button class="select__mobile">크로아티아</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('norw');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('norw');">노르웨이</button>
+                <li  onclick="beer_change(this, 'norw');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">노르웨이</button>
+                    <button class="select__mobile">노르웨이</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('pinlan');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('pinlan');">핀란드</button>
+                <li  onclick="beer_change(this, 'pinlan');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">핀란드</button>
+                    <button class="select__mobile">핀란드</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('swede');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('swede');">스웨덴</button>
+                <li  onclick="beer_change(this, 'swede');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">스웨덴</button>
+                    <button class="select__mobile">스웨덴</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('ameri');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('ameri');">미국</button>
+                <li onclick="beer_change(this, 'ameri');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">미국</button>
+                    <button class="select__mobile">미국</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('cana');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('cana');">캐나다</button>
+                <li onclick="beer_change(this, 'cana');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">캐나다</button>
+                    <button class="select__mobile">캐나다</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('mexi');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('mexi');">멕시코</button>
+                <li onclick="beer_change(this, 'mexi');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">멕시코</button>
+                    <button class="select__mobile">멕시코</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('egy');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('egy');">이집트</button>
+                <li onclick="beer_change(this, 'egy');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">이집트</button>
+                    <button class="select__mobile">이집트</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('north');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('north');">북한</button>
+                <li onclick="beer_change(this, 'north');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">북한</button>
+                    <button class="select__mobile">북한</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('china');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('china');">중국</button>
+                <li onclick="beer_change(this, 'china');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">중국</button>
+                    <button class="select__mobile">중국</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('japan');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('japan');">일본</button>
+                <li onclick="beer_change(this, 'japan');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">일본</button>
+                    <button class="select__mobile">일본</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('taiwan');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('taiwan');">대만</button>
+                <li  onclick="beer_change(this, 'taiwan');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">대만</button>
+                    <button class="select__mobile">대만</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('southasia');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('southasia');">남아시아</button>
+                <li onclick="beer_change(this, 'southasia');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">남아시아</button>
+                    <button class="select__mobile">남아시아</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('eastasia');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('eastasia');">동남아시아</button>
+                <li onclick="beer_change(this, 'eastasia');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">동남아시아</button>
+                    <button class="select__mobile">동남아시아</button>
                 </li>
-                <li>
-                    <button class="select__icon" onclick="beer_change('ase');">&#9734;</button>
-                    <button class="select__country"  onclick="beer_change('ase');">오세아니아</button>
+                <li onclick="beer_change(this, 'ase');">
+                    <button class="select__icon">&#9734;</button>
+                    <button class="select__country">오세아니아</button>
+                    <button class="select__mobile">오세아니아</button>
                 </li>
             </ol>
         </ul>
@@ -329,7 +321,7 @@
       <br>
 
       <script> 
-        function beer_change(country){
+        function beer_change(obj, country){
             // if(country == "kr"){
             //     console.log(country);
             // } else if(country == "ge") {
@@ -339,7 +331,10 @@
 
             $(".beer__wrapper").addClass("d-none");
             $(".beer__wrapper."+country).removeClass("d-none");
-        }
+
+            $(".select__wrapper li").removeClass("active");
+            $(obj).addClass("active");
+        }   
         
         $(".clickinfo").click(function(){
             // console.log(this);
