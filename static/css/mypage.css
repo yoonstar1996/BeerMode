@@ -128,12 +128,6 @@ table {
 /* S: sort-css */
 /*! Customs CSS stylesheet */
 
-
-
-.layout-margin-8 {
-  margin: 3% 8%;
-}
-
 .card-img-top-custom {
   width: 50%;
   margin: 0 auto;
@@ -149,15 +143,16 @@ table {
 .card-deck {
   display: flex;
   justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: stretch;
+
+  /* flex-flow: row wrap;
+  align-items: stretch; */
 }
 
 .card {
-  padding: 3% 1.5%;
+  /* padding: 3% 1.5%;
   border: none;
   max-width: 375px;
-  flex-grow: 1;
+  flex-grow: 1; */
 }
 
 @media (min-width: 768px) {
