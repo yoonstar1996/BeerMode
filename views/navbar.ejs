@@ -30,7 +30,7 @@
         body {
             padding-top: 50px;
         }
-
+        @media screen and (min-width:992px) {
         body::-webkit-scrollbar {
             width: 10px;
         }
@@ -44,7 +44,13 @@
             border-radius: 5px;
             background-color: black;
             height: 50px;
-        }
+        }}
+
+        @media screen and (max-width:991px) {
+            body::-webkit-scrollbar {
+            width: 0px;
+        
+        }}
 
     </style>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #050505;">
