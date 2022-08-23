@@ -95,30 +95,6 @@
         font-size: 10px;
       }
 
-      .btn_top {
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        background-color: black;
-        color: #fff;
-        border: 0px;
-        outline: 0px;
-        width: 45px;
-        height: 45px;
-        cursor: pointer;
-        display: none;
-        border-radius: 50;
-      }
-
-      .arrow_up {
-        width: 15px;
-        margin-bottom: 2px;
-      }
-
-      .navbar-toggler {
-        border-color: black;
-      }
-
       body {
         padding-top: 50px;
       }
@@ -197,11 +173,6 @@
     <br>
     <div class="foot"> ©2022 KDT 2nd Project / 비워 모두, BEER MODE </div>
     <br>
-    <div>
-      <button id="btnTop" class="btn_top" type="button">
-        <img class="arrow_up" src="/static/img/arrow.png" alt="arrow_up">
-      </button>
-    </div>
 
     <script>
       $(".button1").click(function () {
@@ -213,16 +184,6 @@
           $(".hidden").css("height", "0px")
         }
       })
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-          $('#btnTop').show();
-        } else {
-          $('#btnTop').hide();
-        }
-      });
-      $('#btnTop').on('click', e => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
