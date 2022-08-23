@@ -12,7 +12,7 @@ app.get("/main", (req, res) => {
   res.render('main');
 })
 
-app.get("/prol", (req,res)=>{
+app.get("/intro", (req,res)=>{
   res.render('maintwo');
 })
 
