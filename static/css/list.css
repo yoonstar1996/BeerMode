@@ -54,13 +54,12 @@ body::-webkit-scrollbar-thumb{
     background-color: #fed752;
 }
 
-
-
-.clickinfo{
+/* .clickinfo{
     background-color: transparent;
     border: none;
     padding: 0;
-}
+    justify-content: right;
+} */
 .select__icon{
     border: none;
     background-color: transparent;
