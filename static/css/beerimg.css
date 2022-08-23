@@ -167,5 +167,10 @@
     }
     .clickinfo{
         display: block;
+        background-color: #ffc600;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: 50%;
+
     }
 }
