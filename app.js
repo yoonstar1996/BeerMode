@@ -13,14 +13,14 @@ app.get("/main", (req, res) => {
 })
 
 app.get("/intro", (req,res)=>{
-  res.render("maintwo");
+  res.render("intro");
 })
 
 app.get("/info", (req,res)=>{
     res.render("info");
 })
 
-app.get("/calendar", (req,res)=>{
+app.get("/calendar1", (req,res)=>{
   res.render("calendar1");
 }) 
 
