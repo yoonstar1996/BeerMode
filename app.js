@@ -20,7 +20,7 @@ app.get("/info", (req,res)=>{
     res.render("info");
 })
 
-app.get("/calendar1", (req,res)=>{
+app.get("/calendar", (req,res)=>{
   res.render("calendar1");
 }) 
 
