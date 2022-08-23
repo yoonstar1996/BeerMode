@@ -11,12 +11,16 @@
     display: flex;
     padding: 10px 16px 10px 16px;
     list-style: square;
+    background-color: #f8f8f8;
 }
 .select__wrapper ol{
     flex-grow: 1;
     height: 80vh;
     overflow-y: scroll;
 }
+/* .scrollbar{
+    padding-left: 0;
+} */
 
 .scrollbar::-webkit-scrollbar{
     width:5px;
@@ -46,10 +50,16 @@ body::-webkit-scrollbar-thumb{
     background-color: #eaeaea;
 }
 
+.select__wrapper li.active{
+    background-color: #fed752;
+}
+
+
+
 .clickinfo{
     background-color: transparent;
     border: none;
-    padding-left: 0;
+    padding: 0;
 }
 .select__icon{
     border: none;
@@ -62,13 +72,25 @@ body::-webkit-scrollbar-thumb{
     background-color: transparent;
     margin: 0 0 0 8px;
     font-size: 1.2rem;
+    font-weight: bold;
+}
+.select__mobile{
+    border: none;
+    background-color: transparent;
+    margin: 0 0 0 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 .select__country{
     border: none;
     background-color: transparent;
     margin: 0 0 0 8px;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     padding: 5px 0 0 0;
+}
+
+.select__mobile{
+    display: none;
 }
 
 @media screen and (max-width:800px) {
