@@ -157,6 +157,7 @@
     }
     .beer__text--infor{
         font-size: 0.9rem;
+        border:1px solid #ffc600;
     }
     .beer__text--title{
         height: 100%;
@@ -170,7 +171,7 @@
         background-color: #ffc600;
         font-weight: bold;
         font-size: 1rem;
-        border-radius: 50%;
+        /* border-radius: 50%; */
 
     }
 }
