@@ -12,11 +12,11 @@ app.get("/main", (req, res) => {
   res.render("main");
 })
 
-app.get("/intro", (req,res)=>{
+app.get("/intro", (req,res) => {
     res.render("maintwo");
 })
 
-app.get("/info", (req,res)=>{
+app.get("/info", (req,res) => {
     res.render("info");
 })
 
