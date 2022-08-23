@@ -34,7 +34,8 @@
     </style>
 </head>
   <body>
-
+    <%-include("navbar.ejs")%>
+    
     <nav class="select">
         <ul class="select__wrapper">
             <li onclick="beer_change(this, 'kr');">
@@ -98,7 +99,7 @@
                     <button class="select__country">스페인</button>
                     <button class="select__mobile">스페인</button>
                 </li>
-                <li onclick="beer_change(this, 'spain');">
+                <li onclick="beer_change(this, 'austri');">
                     <button class="select__icon">&#9734;</button>
                     <button class="select__country">오스트리아</button>
                     <button class="select__mobile">오스트리아</button>
@@ -348,6 +349,7 @@
         var lastWidth = $(window).width();
 
         $( window ).resize( function() {
+            console.log(lastWidth, $(window).width())
             if($(window).width() >= 600 && lastWidth < 600) {
                 $(".beer__text--infor").removeClass("d-none");
             } else if ($(window).width() <= 600 && lastWidth > 600) {
@@ -356,6 +358,15 @@
 
             lastWidth = $(window).width();
         });
+
+
+        $(document).ready(function(){
+            if(lastWidth > 600) {
+                $(".beer__text--infor").removeClass("d-none");
+            } else if (lastWidth < 600) {
+                $(".beer__text--infor").addClass("d-none");
+            }
+        })
 
 
       </script>
