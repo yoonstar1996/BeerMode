@@ -11,9 +11,6 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
-
-
         <!-- fullcalendar -->
         <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.css' rel='stylesheet' />
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.js"></script>  
@@ -24,9 +21,9 @@
         <!-- 모달 사용 위한 cdn -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js" ></script>
         <!-- sweetalert cdn -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script> -->
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js">            
+        </script>        
         <script type="text/javascript">
            document.addEventListener('DOMContentLoaded', function () {
                 var calendarEl = document.getElementById('calendar');
@@ -63,15 +60,8 @@
                             }
                             else if(eventObj.extendedProps.class == "namhae2022"){
                                 $('#calendar_event8').modal('show')
-                            }
-
-
-
-
-                            // $('#calendar_event').modal('show')sss;                       
+                            }                                            
                     },
-                            // alert('CLicked on ' + eventObj.start); <클릭시 나오게 할 수 있는 창>
-
                     events: [
                     {  
                         class :'pc2022',
@@ -96,8 +86,7 @@
                         end: '2022-08-13',
                         textColor : "black",
                         color: "#fcf0c7"
-                        // color : '#C4B73B',
-                                                 
+                        // color : '#C4B73B',                                                 
                     },      
                     {    
                         class : 'gy2022',        
@@ -110,8 +99,7 @@
                         end: '2022-08-21',
                         textColor : "black",
                         color: "#fbe79f"
-                        // color: '#6B9900',
-                                 
+                        // color: '#6B9900',                                
                     },      
                     {   class : 'gj2022',         
                         title: '2022 광주 Beer Fest',
@@ -122,8 +110,7 @@
                         start: '2022-08-31',            
                         end: '2022-09-05',
                         textColor : "black",
-                        color: "#fde07d"
-                                  
+                        color: "#fde07d"                                 
                     },      
                     {     
                         class : 'sd2022',       
@@ -135,8 +122,7 @@
                         textColor : "black",               
                         start: '2022-08-26',
                         end: '2022-09-03',
-                        color: "#fed752"  
-                                
+                        color: "#fed752"                                  
                     },
                     {
                         class : 'geo2022',
@@ -149,8 +135,7 @@
                         end: '2022-08-20',
                         textColor : "black",
                         color: "#ffd33c"
-                        // color: '#F29661',
-                        
+                        // color: '#F29661',                        
                     },
                     {
                         class : 'jeju2022',
@@ -163,8 +148,7 @@
                         end: '2022-08-20',
                         color: "#ffe079",
                         // color: '#FFB2F5',
-                        textColor : 'black'
-                        
+                        textColor : 'black'                        
                     },
                     {
                         class : 'namhae2022',
@@ -178,10 +162,8 @@
                         // end 원래 2일까진데 3일로 해야 2일로 먹어짐..
                         color: "#ffe079",
                         // color: '#FFB2F5',
-                        textColor : 'black'
-                        
-                    }
-                        
+                        textColor : 'black'                      
+                    }                   
                     ], 
                     headerToolbar: {
                         left: 'prev,next today',          
@@ -200,11 +182,14 @@
                 $(".fc-next-button span").text('next'); 
                 $("#calendarBox").css('border-spacing', '0px');
                 $("#calendarBox").css('border-collapse', 'collapse')
-                // $(".fc-dayGridMonth-button").text('월단위');
-                // $(".fc-listWeek-button").text('모아보기');
+                $(".bookmark").click(function () {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '정상적으로 북마크되었습니다.',
+                        text: '북마크된 일정은 my page에서 확인하실 수 있습니다 :)',
+                })
+                });
             })
-            
-
         </script>
         <style>
             #calendarBox{
@@ -213,8 +198,9 @@
                 margin-left: 10%;
                 margin-right: 10%;
                 margin-top: 15px;
-                /* border: 0.3 solid black; */
-
+            }
+            .fc-event-title, .fc-event-main{
+                cursor: pointer;
             }
             #calendar .fc-day-sun{
             color: red;
@@ -222,7 +208,7 @@
             #calendar .fc-day-sat{
             color: blue;
             }
-            .fc-prev-button, .fc-next-button, .fc-today-button, .disabled, .fc-dayGridMonth-button, .fc-listWeek-button, .btn-secondary{
+            .fc-prev-button, .fc-next-button, .fc-today-button, .disabled, .fc-dayGridMonth-button, .fc-listWeek-button, .btn-secondary, .btn-first{
                 background-color : #ffc600 !important;
                 border-color: black !important;
                 color : black !important;
@@ -231,7 +217,6 @@
             .fc-prev-button, .fc-next-button, .fc-today-button{
                 block-size: 20px;
                 height: auto;
-        
             }
 
             @media screen and (max-width:700px){
@@ -350,10 +335,11 @@
     <br>
     BEER MODE는 여러분이 더 다양한 장소에서,
     더 폭넓게 맥주를 즐기도록
-    <br>
     맥주 관련 행사 일정을 제공합니다.
     <br>
-    <b>캘린더 내 행사명을 누르면 세부정보를 보실 수 있습니다.</b>
+    <span><b>-<u>캘린더 내 행사명을 누르면 세부정보를 보실 수 있습니다</u>.</b></span> 
+    <br>
+    <span><b>-<u>해당 창 내 북마크 기능을 사용할 수 있습니다</u>.</b></span>
     </div>
         <div id="calendarBox">
             <div id="calendar"></div>
@@ -364,9 +350,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
+                    
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 평창 '한여름밤의 맥주 한 잔' 알펜시아 비어가든 <br>
@@ -376,6 +360,10 @@
                     <a href="https://phoenixhnr.co.kr/static/pyeongchang/eating/special/beer-garden" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -387,9 +375,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 전주 가맥축제 <br>
@@ -399,6 +387,9 @@
                     <a href="http://www.gamaek.co.kr/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -410,9 +401,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 고양 프리미엄 맥주축제<br>
@@ -422,6 +413,9 @@
                     <a href="https://beer-festival.kr" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -433,9 +427,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 광주 Beer Fest<br>
@@ -445,6 +439,9 @@
                     <a href="http://www.beerfestgwangju.com/#" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -456,9 +453,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 송도 맥주축제 <br>
@@ -468,6 +465,9 @@
                     <a href="http://www.songdobeer.com/beer/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -479,9 +479,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first scrap" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 거제 비어페스타<br>
@@ -491,6 +491,9 @@
                     <a href="https://2022gbf.modoo.at/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -502,9 +505,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 제주 한잔우리술페스티벌<br>
@@ -514,6 +517,9 @@
                     <a href="https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013707" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
@@ -525,9 +531,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><b>more in detail</b></h5>
-                    <button type="button" class="btn btn-first" data-bs-dismiss="modal">
+                    <!-- <button type="button" class="btn btn-first" data-bs-dismiss="modal">
                         <span>&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <b>행사명</b> : 2022 남해 제10회 독일마을 맥주축제<br>
@@ -537,21 +543,24 @@
                     <a href="https://www.namhae.go.kr/tour/00009/00953.web?amode=view&idx=19" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-first bookmark">
+                        <span>북마크</span>
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        $(".buttonCal").click(function () {
-        var height = $(".hidden").css("height");
-        if (height == "0px") {
-          $(".hidden").css("height", "130px")
-        }
-        else if (height == "130px") {
-          $(".hidden").css("height", "0px")
-        }
-      })
+    $(".buttonCal").click(function () {
+      var height = $(".hidden").css("height");
+      if (height == "0px") {
+        $(".hidden").css("height", "130px")
+      }
+      else if (height == "130px") {
+        $(".hidden").css("height", "0px")
+      }
+    })
       
     </script>
     <script src="https://cdn.jsdelivr.nenpm/bootstrap@5.2.0/dist/js/bootstrabundle.min.js"
