@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,17 +21,6 @@
 
                 /* @media screen and (max-width:700px) {
                 } */
-
-        .foot {
-            text-align: center;
-            align-items: center;
-            margin: auto;
-            font-size: 10px;
-            }
-        .navbar{
-            /* position: fixed; */
-            z-index: 20;
-        }
 
     </style>
 </head>
@@ -314,11 +305,6 @@
             <%-include("beer_item/beer_ase.ejs")%>
         </div>
     </section>
-      <br>
-      <br>
-      <br>
-      <div class="foot"> ©2022 KDT 2nd Project / 비워 모두, BEER MODE </div>
-      <br>
 
       <script> 
         function beer_change(obj, country){
@@ -331,25 +317,50 @@
 
             $(".beer__wrapper").addClass("d-none");
             $(".beer__wrapper."+country).removeClass("d-none");
+            window.scrollTo(0, 0);
 
             $(".select__wrapper li").removeClass("active");
             $(obj).addClass("active");
         }   
         
         $(".clickinfo").click(function(){
-            // console.log(this);
-            var informationn = $(this).next("p");
-            if($(informationn).hasClass("d-none")) {
-                $(informationn).removeClass("d-none");
+            var infoparent1 = $(this).parent("div"); /*displayflex*/
+            var nextp = $(infoparent1).next(); /*beer__text--infor*/
+            var pinnertext = $(nextp).text();
+            // console.log(pinnertext);
+            if($(nextp).hasClass("d-none")) {
+                $(nextp).removeClass("d-none");
             } else {
-                $(informationn).addClass("d-none");
+                $(nextp).addClass("d-none");
+            }
+        })
+
+        
+        $(".beericon").click(function(){
+            var iconbeer = $(this);
+            if($(iconbeer).hasClass("nocolor")){
+                $(iconbeer).removeClass("nocolor");
+                $(iconbeer).addClass("yellowcolor");
+                var parent1 = $(this).parent("div"); /*displayflex*/
+                var parent2 = $(parent1).parent("div"); /*beer__text*/
+                var parent3 = $(parent2).parent("div"); /*beer__info*/
+                var sibling1 = $(parent3).siblings("img"); /*beer__img*/
+                var imgsrc = $(sibling1).attr("src"); /*이미지src*/
+                var h4tag = $(parent1).siblings("h4");/*h4태그*/
+                var beertitle = h4tag.text(); /*하이트 엑스트라 콜드*/
+                
+                console.log(imgsrc);
+                console.log(beertitle);
+            } else if ($(iconbeer).hasClass("yellowcolor")){
+                $(iconbeer).removeClass("yellowcolor");
+                $(iconbeer).addClass("nocolor");
             }
         })
 
         var lastWidth = $(window).width();
 
         $( window ).resize( function() {
-            console.log(lastWidth, $(window).width())
+            // console.log(lastWidth, $(window).width())
             if($(window).width() >= 600 && lastWidth < 600) {
                 $(".beer__text--infor").removeClass("d-none");
             } else if ($(window).width() <= 600 && lastWidth > 600) {
@@ -363,8 +374,12 @@
         $(document).ready(function(){
             if(lastWidth > 600) {
                 $(".beer__text--infor").removeClass("d-none");
+                // $(".select__menu").addClass("d-none");
+                // $(".select__icon").addClass("d-none");
             } else if (lastWidth < 600) {
                 $(".beer__text--infor").addClass("d-none");
+                // $(".select__menu").removeClass("d-none");
+                // $(".select__icon").removeClass("d-none");
             }
         })
 

@@ -3,9 +3,10 @@
     display: flex;
     flex-direction: column;
     min-width: 200px;
-    min-height: 90vh;
+    min-height: 94.1vh;
     background-color: #f8f8f8;
     padding: 10px 0 0 0;
+    margin: 0px;
 }
 .select__wrapper li {
     display: flex;
@@ -77,7 +78,7 @@ body::-webkit-scrollbar-thumb{
     border: none;
     background-color: transparent;
     margin: 0 0 0 8px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 .select__country{
@@ -92,7 +93,7 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 
-@media screen and (max-width:800px) {
+/* @media screen and (max-width:800px) {
     .select__menu{
         display: none;
     }
@@ -102,7 +103,7 @@ body::-webkit-scrollbar-thumb{
     .select__country{
         display: none;
     }
-}
+} */
 /* @media screen and (max-height:780px) {
     .select__wrapper ol{
         flex-grow: 1;
