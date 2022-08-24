@@ -28,6 +28,10 @@ app.get("/mypage", (req, res) => {
     res.render("mypage");
 })
 
+app.get("/logout", (req, res) => {
+    res.render("logout");
+})
+
 app.listen(port, () => {
     console.log("server open: ", port);
 })
