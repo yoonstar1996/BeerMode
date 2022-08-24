@@ -22,17 +22,6 @@
                 /* @media screen and (max-width:700px) {
                 } */
 
-        .foot {
-            text-align: center;
-            align-items: center;
-            margin: auto;
-            font-size: 10px;
-            }
-        .navbar{
-            /* position: fixed; */
-            z-index: 20;
-        }
-
     </style>
 </head>
   <body>
@@ -316,11 +305,6 @@
             <%-include("beer_item/beer_ase.ejs")%>
         </div>
     </section>
-      <br>
-      <br>
-      <br>
-      <div class="foot"> ©2022 KDT 2nd Project / 비워 모두, BEER MODE </div>
-      <br>
 
       <script> 
         function beer_change(obj, country){
@@ -333,6 +317,7 @@
 
             $(".beer__wrapper").addClass("d-none");
             $(".beer__wrapper."+country).removeClass("d-none");
+            window.scrollTo(0, 0);
 
             $(".select__wrapper li").removeClass("active");
             $(obj).addClass("active");

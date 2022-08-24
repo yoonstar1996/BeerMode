@@ -3,9 +3,10 @@
     display: flex;
     flex-direction: column;
     min-width: 200px;
-    min-height: 90vh;
+    min-height: 94.1vh;
     background-color: #f8f8f8;
     padding: 10px 0 0 0;
+    margin: 0px;
 }
 .select__wrapper li {
     display: flex;
