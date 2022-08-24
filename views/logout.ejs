@@ -91,22 +91,77 @@
       margin: auto;
       font-size: 10px;
     }
+    @media screen and (min-width:992px) {
+    #box1{
+      text-align: center;
+      margin: auto;
+      align-items: center;
+      align-self: center;
+      border-radius: 20px;
+      width: 500px;
+      height: 300px;
+      border: solid 1px grey;
+      transition: 1s;
+    }}
+
+    @media screen and (max-width:991px) {
+      #box1{
+      text-align: center;
+      margin: auto;
+      align-items: center;
+      align-self: center;
+      border-radius: 20px;
+      width: 400px;
+      height: 300px;
+      border: solid 1px grey;
+      transition: 1s;
+    }
+    }
+
+    .login{
+      border: none;
+      background-color: #ffc600;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      width: 200px;
+      border-radius: 30px;
+    }
+
+    .id{
+      width: 200px;
+    }
+
+    .pw{
+      width: 200px;
+    }
 
   </style>
 </head>
 
 <body>
   <%-include("navbar.ejs")%>
-  <br>
-  <br>
-  <div class="foot"> ©2022 KDT 2nd Project / 비워 모두, BEER MODE </div>
-  <br>
+    <br>
+    <br>
+          <div id="box1">
+            <br>
+            <br>
+            <h2 style="text-align: center; font-weight: 900;">BEER MODE</h2>
+            <h6 style="text-align: center;">LOG IN</h6>
+            <div><input type="text" placeholder="ID" style="border:solid 0.5px grey; font-size: small; width: 180px; height: 25px;"></div>
+            <div><input type="password" placeholder="PASSWORD" style="margin-top: 10px; border: solid 0.5px grey; font-size:small; width: 180px; height: 25px;"></div>
+            <div><button type="button" class="login" style="margin-top:10px;" onclick="alert('로그인 기능은 준비중입니다.')">login</button></div>
+          </div>
+    <br>
+    <br>
+    <div class="foot"> ©2022 KDT 2nd Project / 비워 모두, BEER MODE </div>
+    <br>
 
-  <script>
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+    <script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
