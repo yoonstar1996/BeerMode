@@ -322,10 +322,8 @@
                     $(obj).addClass("active");
                 }   
                 
-        var date = new Date();
-        var time = date.getFullYear() + "년 " + (date.getMonth()+1) + "월 " + date.getDay() + "일 " + date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초";
-
-        $(".clickinfo").click(function(){
+                
+                $(".clickinfo").click(function(){
             var infoparent1 = $(this).parent("div"); /*displayflex*/
             var infoparent2 = $(infoparent1).parent("div"); /*beer__text*/
             var infoparent3 = $(infoparent2).parent("div"); /*beer__info*/
@@ -333,22 +331,22 @@
             var infoparent4 = $(infosibling1).parent("div"); /*beer__item*/
             var nextp = $(infoparent1).next(); /*beer__text--infor*/
             var pinnertext = $(nextp).text(); /*beer__text--infor 내용*/
-
+            
             if($(nextp).hasClass("d-none")) {
                 $(nextp).removeClass("d-none");
                 $(this).addClass("infocolor");
-
+                
                 /*스크롤 이동 함수*/
                 var offsetstr = $(this).offset();
                 // console.log(offsetstr.top);
                 window.scrollTo(0, offsetstr.top-310);
-
+                
             } else {
                 $(nextp).addClass("d-none");
                 $(this).removeClass("infocolor");
             }
         })
-
+        
         
         $(".beericon").click(function(){
             var iconbeer = $(this);
@@ -363,7 +361,9 @@
                 var imgsrc = $(sibling1).attr("src"); /*이미지src*/
                 var h4tag = $(parent1).siblings("h4");/*h4태그*/
                 var beertitle = h4tag.text(); /*h4태그 내용*/
-
+                
+                var date = new Date();
+                var time = date.getFullYear() + "년 " + (date.getMonth()+1) + "월 " + date.getDay() + "일 " + date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초";
                 
                 console.log(imgsrc);
                 console.log(beertitle);
