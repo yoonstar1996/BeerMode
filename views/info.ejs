@@ -323,15 +323,29 @@
             $(obj).addClass("active");
         }   
         
+        var selectimg;
+
         $(".clickinfo").click(function(){
             var infoparent1 = $(this).parent("div"); /*displayflex*/
+            var infoparent2 = $(infoparent1).parent("div"); /*beer__text*/
+            var infoparent3 = $(infoparent2).parent("div"); /*beer__info*/
+            var infosibling1 = $(infoparent3).siblings("img"); /*beer__img*/
+            var infoparent4 = $(infosibling1).parent("div"); /*beer__item*/
             var nextp = $(infoparent1).next(); /*beer__text--infor*/
             var pinnertext = $(nextp).text();
-            // console.log(pinnertext);
+
             if($(nextp).hasClass("d-none")) {
                 $(nextp).removeClass("d-none");
+                $(this).addClass("infocolor");
+
+                /*스크롤 이동 함수*/
+                var offsetstr = $(this).offset();
+                // console.log(offsetstr.top);
+                window.scrollTo(0, offsetstr.top-310);
+
             } else {
                 $(nextp).addClass("d-none");
+                $(this).removeClass("infocolor");
             }
         })
 
@@ -341,6 +355,7 @@
             if($(iconbeer).hasClass("nocolor")){
                 $(iconbeer).removeClass("nocolor");
                 $(iconbeer).addClass("yellowcolor");
+                
                 var parent1 = $(this).parent("div"); /*displayflex*/
                 var parent2 = $(parent1).parent("div"); /*beer__text*/
                 var parent3 = $(parent2).parent("div"); /*beer__info*/
