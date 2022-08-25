@@ -5,7 +5,7 @@
     min-width: 200px;
     min-height: 94.1vh;
     background-color: #f8f8f8;
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     margin: 0px;
 }
 .select__wrapper li {
@@ -19,9 +19,6 @@
     height: 80vh;
     overflow-y: scroll;
 }
-/* .scrollbar{
-    padding-left: 0;
-} */
 
 .scrollbar::-webkit-scrollbar{
     width:5px;
@@ -55,12 +52,6 @@ body::-webkit-scrollbar-thumb{
     background-color: #fed752;
 }
 
-/* .clickinfo{
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    justify-content: right;
-} */
 .select__icon{
     border: none;
     background-color: transparent;

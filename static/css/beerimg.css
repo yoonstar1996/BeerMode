@@ -2,33 +2,42 @@
     display: flex;
     flex-wrap: wrap; /*1차원 정렬을 여러 행으로 할 수 있다.*/
     justify-content: left;
-    margin: 40px 0 0 200px;
+    margin: 30px 0 0 200px;
     padding: 0px 0 0 10px;
 }
 .beer__item{
     width: 20%;
     margin: 0 0 10px 0;
     padding: 0 10px;
+    border-right: 1.5px dotted #eaeaea;
+    border-bottom: 1.5px dotted #eaeaea;
 }
 
 .beer__img{
     max-width: 100%;
-    margin: 0 0 10px 0;
+    /* margin: 0 0 10px 0; */
     height: 200px;
+    display: block;
+    margin: 0px auto;
 }
 /* .beer__info{
     height: 100%;
 } */
 .beer__text{
     width: 100%;
+    margin-top: 10px;
 }
 
 .beer__text--title{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
-    height: 100%
-    /* text-align: center; */
+    /* margin-bottom: 0.5rem; */
+    height: 100%;
+    display: block;
+    text-align: center;
+    width: 90%;
+    margin: 0;
+    
 } 
 
 .beer__text--alchol{
@@ -41,6 +50,8 @@
 .beer__text--infor{
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+    padding: 5px 5px;
+    /* background-color: #fcf0c7; */
 }
 
 .clickinfo{
@@ -48,32 +59,43 @@
 }
 .displayflex{
     display: flex;
-    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
 }
 .yellowcolor{
     background-color: transparent;
     border: 0;
-    margin-left: 20px;
+    margin-left: 8px;
     color: #ffc600;
 }
 .nocolor{
     background-color: transparent;
     border: 0;
-    margin-left: 20px;
+    margin-left: 8px;
     color: black;
 }
 
 .beericon{
-    margin-left: 10px;
+    margin:0 0 3 8px;
+    padding-bottom: 3px;
 }
 .beer__text--infor{
     font-size: 0.9rem;
-    border:1px solid #ffc600;
-    margin: 8px 0;
+    /* border:1px solid #ffc600; */
+    margin: 0 0;
 }
+
+.select__icon, .select__menu, .select__mobile {
+    color: black;
+}
+
+
 @media screen and (max-width:1200px) {
     .beer__item{
         width: 25%;
+    }
+    .select__icon, .select__menu, .select__mobile {
+        color: black;
     }
     
 }
@@ -156,6 +178,9 @@
     .select__mobile{
         display: none;
     }
+    .select__icon, .select__menu, .select__mobile {
+        color: black;
+    }
 }
 @media screen and (max-width:600px) {
     .select__menu{
@@ -180,7 +205,7 @@
         font-weight: bold;
     }
     .beer__wrapper{
-        margin: 30px 0 0 0;
+        margin: 10px 0 0 0;
         padding-left: 22px;
     }
     .beer__item{
@@ -192,10 +217,10 @@
     .beer__img{
         max-width: 80%;
         display: block;
-        margin: 0px auto;
+        margin: 10px auto;
     }
     .beer__text{
-        margin-right: 0;
+        margin: 15px 0 0 0;
         width: 100%;
         text-align: center;
     }
@@ -203,9 +228,10 @@
         font-size: 1rem;
         display: block;
         margin: 5px auto;
+        width: 90%;
     }
     .beer__text--alchol{
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding-top: 0px;
         margin: 4px 0;
     }
@@ -215,6 +241,7 @@
         margin: 8px 21px;
         text-align: left;
         padding: 5px 7px;
+        background-color: #fcf0c7;
     }
     .beer__text--title{
         height: 100%;
@@ -237,8 +264,22 @@
         margin-left: 3px;
     }
     .displayflex{
-        /* margin-left: 90px; */
         align-items: center;
         justify-content: center;
+        margin-bottom: 10px;
+    }
+    .infocolor{
+        display: block;
+        background-color: black;
+        font-size: 0.8rem;
+        border-radius: 25%;
+        margin:0 0 0 10px;
+        border: none;
+        padding: 4px;
+        color: #fed752;
+    
+    }
+    .select__icon, .select__menu, .select__mobile {
+        color: black;
     }
 }

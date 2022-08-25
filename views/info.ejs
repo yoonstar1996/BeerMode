@@ -14,14 +14,13 @@
     <link href="/static/css/beerimg.css" rel="stylesheet">
     <style>
 
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
-        
-        a {font-family:Arial, Helvetica, sans-serif;}
-
-
-                /* @media screen and (max-width:700px) {
-                } */
-
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+    
+            /* @media screen and (max-width:700px) {
+            } */
+    body{
+        font-family: 'Noto Sans', sans-serif;
+    }
     </style>
 </head>
   <body>
@@ -305,52 +304,71 @@
             <%-include("beer_item/beer_ase.ejs")%>
         </div>
     </section>
-
-      <script> 
+    
+    <script> 
         function beer_change(obj, country){
             // if(country == "kr"){
-            //     console.log(country);
-            // } else if(country == "ge") {
-            //     $(".beer__wrapper").addClass("d-none");
-            //     $(".beer__wrapper.ge").removeClass("d-none");
-            // }
-
-            $(".beer__wrapper").addClass("d-none");
-            $(".beer__wrapper."+country).removeClass("d-none");
-            window.scrollTo(0, 0);
-
-            $(".select__wrapper li").removeClass("active");
-            $(obj).addClass("active");
-        }   
-        
-        $(".clickinfo").click(function(){
+                //     console.log(country);
+                // } else if(country == "ge") {
+                    //     $(".beer__wrapper").addClass("d-none");
+                    //     $(".beer__wrapper.ge").removeClass("d-none");
+                    // }
+                    
+                    $(".beer__wrapper").addClass("d-none");
+                    $(".beer__wrapper."+country).removeClass("d-none");
+                    window.scrollTo(0, 0);
+                    
+                    $(".select__wrapper li").removeClass("active");
+                    $(obj).addClass("active");
+                }   
+                
+                
+                $(".clickinfo").click(function(){
             var infoparent1 = $(this).parent("div"); /*displayflex*/
+            var infoparent2 = $(infoparent1).parent("div"); /*beer__text*/
+            var infoparent3 = $(infoparent2).parent("div"); /*beer__info*/
+            var infosibling1 = $(infoparent3).siblings("img"); /*beer__img*/
+            var infoparent4 = $(infosibling1).parent("div"); /*beer__item*/
             var nextp = $(infoparent1).next(); /*beer__text--infor*/
-            var pinnertext = $(nextp).text();
-            // console.log(pinnertext);
+            var pinnertext = $(nextp).text(); /*beer__text--infor 내용*/
+            
             if($(nextp).hasClass("d-none")) {
                 $(nextp).removeClass("d-none");
+                $(this).addClass("infocolor");
+                
+                /*스크롤 이동 함수*/
+                var offsetstr = $(this).offset();
+                // console.log(offsetstr.top);
+                window.scrollTo(0, offsetstr.top-310);
+                
             } else {
                 $(nextp).addClass("d-none");
+                $(this).removeClass("infocolor");
             }
         })
-
+        
         
         $(".beericon").click(function(){
             var iconbeer = $(this);
             if($(iconbeer).hasClass("nocolor")){
                 $(iconbeer).removeClass("nocolor");
                 $(iconbeer).addClass("yellowcolor");
+                
                 var parent1 = $(this).parent("div"); /*displayflex*/
                 var parent2 = $(parent1).parent("div"); /*beer__text*/
                 var parent3 = $(parent2).parent("div"); /*beer__info*/
                 var sibling1 = $(parent3).siblings("img"); /*beer__img*/
                 var imgsrc = $(sibling1).attr("src"); /*이미지src*/
                 var h4tag = $(parent1).siblings("h4");/*h4태그*/
-                var beertitle = h4tag.text(); /*하이트 엑스트라 콜드*/
+                var beertitle = h4tag.text(); /*h4태그 내용*/
+                
+                var date = new Date();
+                var time = date.getFullYear() + "년 " + (date.getMonth()+1) + "월 " + date.getDay() + "일 " + date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초";
                 
                 console.log(imgsrc);
                 console.log(beertitle);
+                console.log(time);
+                
             } else if ($(iconbeer).hasClass("yellowcolor")){
                 $(iconbeer).removeClass("yellowcolor");
                 $(iconbeer).addClass("nocolor");
