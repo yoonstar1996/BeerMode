@@ -4,17 +4,6 @@ a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.foot {
-  text-align: center;
-  align-items: center;
-  margin: auto;
-  font-size: 10px;
-}
-
-#btnSort {
-  right: 0;
-}
-
 .card {
   /* box-shadow: 0px 0px 0px grey; */
   -webkit-transition: box-shadow .4s ease-out;
@@ -32,27 +21,22 @@ a {
   -webkit-transition: box-shadow .6s ease-in;
 }
 
-
-
-/*! Customs CSS stylesheet */
-
-.card-img-top-custom {
-  width: 50%;
-  margin: 0 auto;
-}
-
-
-
-.card-deck {
-  display: flex;
-  justify-content: space-around;
-
-  /* flex-flow: row wrap;
-  align-items: stretch; */
-}
-
-.card-name, .card-rating, .card-comment, .card-date {
+.card-name,
+.card-rating,
+.card-comment,
+.card-date {
   text-align: center;
+}
+
+.card-rating {
+  color: #ffc600;
+  text-decoration: underline rgb(200, 200, 200);
+}
+
+.card-comment {
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
 }
 
 .card-date {
