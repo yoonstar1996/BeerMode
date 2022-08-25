@@ -60,7 +60,6 @@
     @media screen and (max-width:991px) {
         body::-webkit-scrollbar {
             width: 0px;
-
         }
     }
 </style>
@@ -73,7 +72,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/main" style="color: white;"><i
@@ -88,16 +87,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/calendar" style="color: white;">event calendar</a>
                 </li>
-                <li class="nav-item dropdown" style="justify-content: space-between;">
+            </ul>
+            <ul class="navbar-nav" style="padding-right: 20px;">
+                <li class="nav-item dropdown" style="">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         style="color: white;" aria-expanded="false">
-                        user
+                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>　User
                     </a>
-                    <ul class="dropdown-menu" style="color: white;">
-                        <li><a class="dropdown-item" href="/logout">LOG OUT</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end" style="color: white;">
+                        <li>
+                            <h6 class="dropdown-header">WELCOME!</h6> 
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="/mypage">MY PAGE</a></li>
+                        <li><a class="dropdown-item" href="/">BOOK MARK</a></li>
+                        <li><a class="dropdown-item" href="/logout">LOG OUT</a></li>
                     </ul>
                 </li>
+            </ul>
             </ul>
         </div>
     </div>
