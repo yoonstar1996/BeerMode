@@ -58,13 +58,24 @@
                             else if(eventObj.extendedProps.class == "jeju2022"){
                                 $('#calendar_event7').modal('show')
                             }
-                            else if(eventObj.extendedProps.class == "namhae2022"){
+                            else if(eventObj.extendedProps.class == "nh2022"){
                                 $('#calendar_event8').modal('show')
                             }                                            
                     },
+                    resources:[
+                        {id: 'a'},
+                        {id: 'b'},
+                        {id: 'c'},
+                        {id: 'd'},
+                        {id: 'e'},
+                        {id: 'f'},
+                        {id: 'g'},
+                        {id: 'h'}
+                    ],
                     events: [
                     {  
                         class :'pc2022',
+                        resourceId: 'a',
                         title: "평창 '한여름밤의 맥주 한 잔' 알펜시아 비어가든",
                         fee : "대인 35,000원, 소인 9,000원",
                         about : "국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)",
@@ -77,6 +88,7 @@
                     },
                     {            
                         class : 'jj2022',  
+                        resourceId: 'b',
                         title: '전주 가맥축제',
                         place:"bexco 야외광장",
                         fee : "입장료 무료&수제맥주 및 안주 별도구입",
@@ -90,6 +102,7 @@
                     },      
                     {    
                         class : 'gy2022',        
+                        resourceId: 'c',
                         title: '2022 고양 프리미엄 맥주축제',
                         place:"일산 고양꽃전시관",
                         fee : "1일권 20,000원 /전일권 90,000원",
@@ -102,6 +115,7 @@
                         // color: '#6B9900',                                
                     },      
                     {   class : 'gj2022',         
+                    resourceId: 'd',
                         title: '2022 광주 Beer Fest',
                         place:"김대중컨벤션센터 야외광장",
                         fee : "입장료 무료",
@@ -114,6 +128,7 @@
                     },      
                     {     
                         class : 'sd2022',       
+                        resourceId: 'e',
                         title: '2022 송도 맥주축제',
                         place:"송도달빛축제공원",
                         fee : "현장발권 20만원 / 사전예매시 15만원(본인포함 6인 입장기준)",
@@ -126,6 +141,7 @@
                     },
                     {
                         class : 'geo2022',
+                        resourceId: 'f',
                         title: '2022 거제 비어페스타',
                         place:"장승포동 수변공원",
                         fee : "현장발권 10,000원 /사전예매시 9,000원",
@@ -139,6 +155,7 @@
                     },
                     {
                         class : 'jeju2022',
+                        resourceId: 'g',
                         title: '2022 제주 한잔우리술페스티벌',
                         place: "세화리 질그랭이센터",
                         fee : "링크 참조",
@@ -151,7 +168,8 @@
                         textColor : 'black'                        
                     },
                     {
-                        class : 'namhae2022',
+                        class : 'nh2022',
+                        resourceId: 'h',
                         title: '2022 남해 제10회 독일마을 맥주축제',
                         place: "남해 독일마을",
                         fee : "링크 참조",
@@ -186,8 +204,14 @@
                     Swal.fire({
                         icon: 'success',
                         title: '정상적으로 북마크되었습니다.',
-                        text: '북마크된 일정은 my page에서 확인하실 수 있습니다 :)',
-                })
+                        text: '북마크된 일정은 my page에서 확인하실 수 있습니다 :)'
+                    })
+                    var bmbtn = $(this);
+                    var parenta = $(this).parent("div");
+                    // modal-footer
+                    var siblinga = $(parenta).siblings(".modal-body");
+                    var modalText = $(siblinga).text()
+                    console.log(modalText);                    
                 });
             })
         </script>
@@ -360,7 +384,7 @@
                     <a href="https://phoenixhnr.co.kr/static/pyeongchang/eating/special/beer-garden" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark pc2022">
                         <span>북마크</span>
                     </button>
                     </button>
@@ -405,7 +429,7 @@
                         <span>&times;</span>
                     </button> -->
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
                     <b>행사명</b> : 2022 고양 프리미엄 맥주축제<br>
                     <b>장소</b> : 일산 고양꽃전시관<br>
                     <b>행사내용</b> : 시원한 맥주, 다채로운 공연(G-PARK, KCM, 정상수 등)<br>
