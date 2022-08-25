@@ -161,7 +161,7 @@
             <br>
             <h2 style="text-align: center; font-weight: 900;">BEER MODE</h2>
             <h6 style="text-align: center;">LOG IN</h6>
-            <div><input type="text" placeholder="ID" style="border:solid 0.5px grey; font-size: small; width: 180px; height: 25px;"></div>
+            <div><input type="text" placeholder="ID" id="autofocus" style="border:solid 0.5px grey; font-size: small; width: 180px; height: 25px;" autofocus></div>
             <div><input type="password" placeholder="PASSWORD" style="margin-top: 10px; border: solid 0.5px grey; font-size:small; width: 180px; height: 25px;"></div>
             <div><button type="button" class="login" style="margin-top:10px;" onclick="alert('로그인 기능은 준비중입니다.')">login</button></div>
           </div>
@@ -170,6 +170,11 @@
     <%-include("footer.ejs")%>
 
     <script>
+      
+      $(document).ready(function(){
+        $('#autofocus').focus();
+      });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
