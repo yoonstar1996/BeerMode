@@ -1,37 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+    .navbar-toggler {
+        border-color: black;
+    }
 
-        .navbar-toggler {
-            border-color: black;
-        }
+    .btn_top {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background-color: black;
+        color: #fff;
+        border: 0px;
+        outline: 0px;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        display: none;
+        border-radius: 50;
+        z-index: 999;
+    }
 
-        .btn_top {
-            position: fixed;
-            bottom: 50px;
-            right: 50px;
-            background-color: black;
-            color: #fff;
-            border: 0px;
-            outline: 0px;
-            width: 45px;
-            height: 45px;
-            cursor: pointer;
-            display: none;
-            border-radius: 50;
-            z-index: 999;
-        }
+    .arrow_up {
+        width: 15px;
+        margin-bottom: 2px;
+    }
 
-        .arrow_up {
-            width: 15px;
-            margin-bottom: 2px;
-        }
+    body {
+        padding-top: 50px;
+    }
 
+    @media screen and (max-width: 1440px) {
+
+        html,
         body {
-            padding-top: 50px;
+            max-width: 100%;
+            overflow-x: hidden;
         }
-        @media screen and (min-width:992px) {
+    }
+
+    @media screen and (min-width:992px) {
         body::-webkit-scrollbar {
             width: 10px;
         }
@@ -45,68 +54,69 @@
             border-radius: 5px;
             background-color: black;
             height: 50px;
-        }}
+        }
+    }
 
-        @media screen and (max-width:991px) {
-            body::-webkit-scrollbar {
+    @media screen and (max-width:991px) {
+        body::-webkit-scrollbar {
             width: 0px;
-        
-        }}
 
-    </style>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #050505;">
-        <div class="container-fluid">
-            <img src="/static/img/logo4.png" alt="" width="75" height="30" class="d-inline-block align-text-top"
-                padding-left="5px">
-            <a class="navbar-brand" href="/main" style="color: #ffc600;"><strong>　BEER MODE </strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/main" style="color: white;"><i
-                                class="fa fa-home"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/intro" style="color: white;">intro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/info" style="color: white;">info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/calendar" style="color: white;">event calendar</a>
-                    </li>
-                    <li class="nav-item dropdown" style="justify-content: space-between;">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            style="color: white;" aria-expanded="false">
-                            user
-                        </a>
-                        <ul class="dropdown-menu" style="color: white;">
-                            <li><a class="dropdown-item" href="/logout">LOG OUT</a></li>
-                            <li><a class="dropdown-item" href="/mypage">MY PAGE</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--scroll top 시작-->
-    <div>
-        <button id="btnTop" class="btn_top" type="button">
-            <img class="arrow_up" src="/static/img/arrow.png" alt="arrow_up">
+        }
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #050505;">
+    <div class="container-fluid">
+        <img src="/static/img/logo4.png" alt="" width="75" height="30" class="d-inline-block align-text-top"
+            padding-left="5px">
+        <a class="navbar-brand" href="/main" style="color: #ffc600;"><strong>　BEER MODE </strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/main" style="color: white;"><i
+                            class="fa fa-home"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/intro" style="color: white;">intro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/info" style="color: white;">info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calendar" style="color: white;">event calendar</a>
+                </li>
+                <li class="nav-item dropdown" style="justify-content: space-between;">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        style="color: white;" aria-expanded="false">
+                        user
+                    </a>
+                    <ul class="dropdown-menu" style="color: white;">
+                        <li><a class="dropdown-item" href="/logout">LOG OUT</a></li>
+                        <li><a class="dropdown-item" href="/mypage">MY PAGE</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-    <script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 300) {
-                $('#btnTop').show();
-            } else {
-                $('#btnTop').hide();
-            }
-        });
-        $('#btnTop').on('click', e => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        });
-    </script>
+</nav>
+<!--scroll top 시작-->
+<div>
+    <button id="btnTop" class="btn_top" type="button">
+        <img class="arrow_up" src="/static/img/arrow.png" alt="arrow_up">
+    </button>
+</div>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('#btnTop').show();
+        } else {
+            $('#btnTop').hide();
+        }
+    });
+    $('#btnTop').on('click', e => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    });
+</script>
