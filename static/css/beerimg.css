@@ -9,7 +9,7 @@
     width: 20%;
     margin: 0 0 10px 0;
     padding: 0 10px;
-    border-right: 2px solid #eaeaea;
+    border-right: 1.5px dotted #eaeaea;
 }
 
 .beer__img{

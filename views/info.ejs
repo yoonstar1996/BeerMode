@@ -14,14 +14,13 @@
     <link href="/static/css/beerimg.css" rel="stylesheet">
     <style>
 
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
-        
-        a {font-family:Arial, Helvetica, sans-serif;}
-
-
-                /* @media screen and (max-width:700px) {
-                } */
-
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+    
+            /* @media screen and (max-width:700px) {
+            } */
+    body{
+        font-family: 'Noto Sans', sans-serif;
+    }
     </style>
 </head>
   <body>
@@ -305,26 +304,29 @@
             <%-include("beer_item/beer_ase.ejs")%>
         </div>
     </section>
-
-      <script> 
+    
+    <script> 
         function beer_change(obj, country){
             // if(country == "kr"){
-            //     console.log(country);
-            // } else if(country == "ge") {
-            //     $(".beer__wrapper").addClass("d-none");
-            //     $(".beer__wrapper.ge").removeClass("d-none");
-            // }
+                //     console.log(country);
+                // } else if(country == "ge") {
+                    //     $(".beer__wrapper").addClass("d-none");
+                    //     $(".beer__wrapper.ge").removeClass("d-none");
+                    // }
+                    
+                    $(".beer__wrapper").addClass("d-none");
+                    $(".beer__wrapper."+country).removeClass("d-none");
+                    window.scrollTo(0, 0);
+                    
+                    $(".select__wrapper li").removeClass("active");
+                    $(obj).addClass("active");
+                }   
+                
+        var date = new Date();
+        var time = date.getFullYear() + "년 " + (date.getMonth()+1) + "월 " + date.getDay() + "일 " + date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초";
 
-            $(".beer__wrapper").addClass("d-none");
-            $(".beer__wrapper."+country).removeClass("d-none");
-            window.scrollTo(0, 0);
-
-            $(".select__wrapper li").removeClass("active");
-            $(obj).addClass("active");
-        }   
-        
         var selectimg;
-
+            
         $(".clickinfo").click(function(){
             var infoparent1 = $(this).parent("div"); /*displayflex*/
             var infoparent2 = $(infoparent1).parent("div"); /*beer__text*/
@@ -332,7 +334,7 @@
             var infosibling1 = $(infoparent3).siblings("img"); /*beer__img*/
             var infoparent4 = $(infosibling1).parent("div"); /*beer__item*/
             var nextp = $(infoparent1).next(); /*beer__text--infor*/
-            var pinnertext = $(nextp).text();
+            var pinnertext = $(nextp).text(); /*beer__text--infor 내용*/
 
             if($(nextp).hasClass("d-none")) {
                 $(nextp).removeClass("d-none");
@@ -362,10 +364,13 @@
                 var sibling1 = $(parent3).siblings("img"); /*beer__img*/
                 var imgsrc = $(sibling1).attr("src"); /*이미지src*/
                 var h4tag = $(parent1).siblings("h4");/*h4태그*/
-                var beertitle = h4tag.text(); /*하이트 엑스트라 콜드*/
+                var beertitle = h4tag.text(); /*h4태그 내용*/
+
                 
                 console.log(imgsrc);
                 console.log(beertitle);
+                console.log(time);
+                
             } else if ($(iconbeer).hasClass("yellowcolor")){
                 $(iconbeer).removeClass("yellowcolor");
                 $(iconbeer).addClass("nocolor");
