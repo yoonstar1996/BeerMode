@@ -19,8 +19,8 @@
 
 <body>
   <!-- 네비바, 스크롤탑, 스크롤바 ejs 호출 -->
-  <%-include("navbar.ejs")%>
-  <!-- <a style="color: #ffc600; text-align: center; vertical-align: middle; font-weight: 900; font-size: larger;"><div>test</div></a> -->
+  <%- include("navbar.ejs") %>
+
   <!-- S:상단 배너 -->
   <br>
   <div class="container-fluid" id="" style="padding: 0px;">
@@ -31,7 +31,6 @@
     </div>
   </div>
   <!-- E:상단 배너 -->
-
 
   <!-- S:정렬, 필터 -->
   <div class="container-fluid my-3" id="">
@@ -47,7 +46,7 @@
           </svg> sort
         </button>
       </div>
-      <input class="col form-control mr-sm-2" type="search" placeholder="just type a name" aria-label="Search"
+      <input class="col form-control mr-sm-2" type="search" placeholder="Just type a name" aria-label="Search"
         id="search">
       <div class="col">
         <button class="btn btn-outline-success my-0 my-sm-0" type="submit">
@@ -76,12 +75,12 @@
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
-                <div class="col card-name text-center"><a>Heineken</a></div>
-                <h5 class="card-rating text-center">★★★★☆</h5>
-                <p class="card-comment text-center">
+                <div class="col card-name"><a>Heineken</a></div>
+                <h5 class="card-rating">★★★★☆</h5>
+                <p class="card-comment">
                   적당한 씁쓸한 맛과 조금 단 맛 때문인지 물리지 않고 끝까지 맛을 보며 마시기 좋다. 언제나 실패 없는 안전빵(?)
                 </p>
-                <p class="card-text text-center">
+                <p class="card-date">
                   <small class="text-muted">Last updated 3 mins ago</small>
                 </p>
               </div>
@@ -98,12 +97,12 @@
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
-                <div class="col card-name text-center"><a>Hoegaarden Rosee</a></div>
-                <h5 class="card-title">★★★★★</h5>
-                <p class="card-text text-center">
+                <div class="card-name"><a>Hoegaarden Rosee</a></div>
+                <h5 class="card-rating">★★★★★</h5>
+                <p class="card-comment">
                   라즈베리 향이 약간 첨가됨. 신기한 마음에 도전해 봄. 기대감이 크지 않아서 그런지 만족. 오히려 자주 먹기에는 ㅎㅎ
                 </p>
-                <p class="card-text text-center">
+                <p class="card-date">
                   <small class="text-muted">Last updated 10 days ago</small>
                 </p>
               </div>
@@ -120,12 +119,12 @@
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
-                <div class="col card-name text-center"><a>Asahi</a></div>
-                <h5 class="card-title">★★☆☆☆</h5>
-                <p class="card-text text-center">
+                <div class="col card-name"><a>Asahi</a></div>
+                <h5 class="card-rating">★★☆☆☆</h5>
+                <p class="card-comment">
                   기대감이 큰 상태로 맛봐서 그런지 실망이 컸던 기억이 남음. 조합을 바꿔서 언젠가 다시 도전해볼까.
                 </p>
-                <p class="card-text text-center">
+                <p class="card-date">
                   <small class="text-muted">Last updated 13 days ago</small>
                 </p>
               </div>
@@ -142,12 +141,12 @@
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
-                <div class="col card-name text-center"><a>Carlsberg</a></div>
-                <h5 class="card-title">★★★★☆</h5>
-                <p class="card-text text-center">
+                <div class="col card-name"><a>Carlsberg</a></div>
+                <h5 class="card-rating">★★★★☆</h5>
+                <p class="card-comment">
                   쓴 맛 싫어하는 사람들이 많이 마신다고 들었음. 가볍게 마시기에 좋았다.
                 </p>
-                <p class="card-text text-center">
+                <p class="card-date">
                   <small class="text-muted">Last updated 2 months ago</small>
                 </p>
               </div>
