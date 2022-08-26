@@ -85,12 +85,15 @@
                         place:"bexco 야외광장",
                         fee : "입장료 무료&수제맥주 및 안주 별도구입",
                         about : "가맥문화를 만나고, 오늘 만든 맥주를 오늘 마실 수 있는 유일한 축제",
-                        link :"http://www.gamaek.co.kr/",           
+                        link :"http://www.gamaek.co.kr/",
+                        textColor : "black",
+                        color: "#fcf0c7",           
                         start: '2022-08-11',            
                         end: '2022-08-13',
-                        textColor : "black",
-                        color: "#fcf0c7"
-                        // color : '#C4B73B',                                                 
+                        src: "",
+                        src: ""
+
+                                               
                     },      
                     {    
                         class : 'gy2022',        
@@ -101,6 +104,7 @@
                         link :"https://beer-festival.kr/",           
                         start: '2022-08-17',            
                         end: '2022-08-21',
+                        src: "/static/img/eventimg/gy2022.jpg",
                         textColor : "black",
                         color: "#fbe79f"
                         // color: '#6B9900',                                
@@ -113,6 +117,7 @@
                         link :"http://www.beerfestgwangju.com/#",            
                         start: '2022-08-31',            
                         end: '2022-09-05',
+                        src: "/static/img/eventimg/gj2022.jpg",
                         textColor : "black",
                         color: "#fde07d"                                 
                     },      
@@ -126,7 +131,8 @@
                         textColor : "black",               
                         start: '2022-08-26',
                         end: '2022-09-03',
-                        color: "#fed752"                                  
+                        src: "/static/img/eventimg/sd2022.png",
+                        color:"#fed752"                                  
                     },
                     {
                         class : 'geo2022',
@@ -137,6 +143,7 @@
                         link :"https://2022gbf.modoo.at/",
                         start: '2022-08-17',
                         end: '2022-08-20',
+                        src: "",
                         textColor : "black",
                         color: "#ffd33c"
                         // color: '#F29661',                        
@@ -150,6 +157,7 @@
                         link : "https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013707",
                         start: '2022-08-20',
                         end: '2022-08-20',
+                        src: "",
                         color: "#ffe079",
                         // color: '#FFB2F5',
                         textColor : 'black'                        
@@ -163,6 +171,7 @@
                         link : "https://www.namhae.go.kr/tour/00009/00953.web?amode=view&idx=19",
                         start: '2022-09-30',
                         end: '2022-10-03',
+                        src: "",
                         // end 원래 2일까진데 3일로 해야 2일로 먹어짐..
                         color: "#ffe079",
                         // color: '#FFB2F5',
@@ -208,7 +217,7 @@
                         const parentb = $(pc).parent("div");
                         const parentb1 = $(parentb).parent("div");
                         const pcbox = $(parentb1).parent("a");
-                        $(pcbox).css('background-color', '#FF87F9');
+                        $(pcbox).css('background-color', '#ff9000');
                         // $(pcbox).css('border-color', 'red', ).css('border-width', '5px');
                     }
                     // 평창 북마크효과
@@ -218,7 +227,7 @@
                         const parentc1 = $(parentc).parent("div");
                         const parentc2 = $(parentc1).parent("div");
                         const jjbox = $(parentc2).parent("a");
-                        $(jjbox).css('background-color', '#3EA3FF');
+                        $(jjbox).css('background-color', '#ff9000');
                     }
                     // 전주 북마크 효과
                     else if($(bmbtn).hasClass("gy2022")){
@@ -227,7 +236,7 @@
                         const parentd1 = $(parentd).parent("div");
                         const parentd2 = $(parentd1).parent("div");
                         const gybox = $(parentd2).parent("a");
-                        $(gybox).css('background-color', '#FF2BF4'); 
+                        $(gybox).css('background-color', '#ff9000'); 
                     }
                     // 고양 북마크효과
                     else if($(bmbtn).hasClass("gj2022")){
@@ -236,7 +245,7 @@
                         const parente1 = $(parente).parent("div");
                         const parente2 = $(parente1).parent("div");
                         const gjbox = $(parente2).parent("a");
-                        $(gjbox).css('background-color', '#ed8f33');
+                        $(gjbox).css('background-color', '#ff9000');
                     }
                     // 광주 북마크효과
                     else if($(bmbtn).hasClass("sd2022")){
@@ -245,7 +254,7 @@
                         const parentf1 = $(parentf).parent("div");
                         const parentf2 = $(parentf1).parent("div");
                         const sdbox = $(parentf2).parent("a");
-                        $(sdbox).css('background-color', 'red');
+                        $(sdbox).css('background-color', '#ff9000');
                     }
                     // 송도 북마크효과
                     else if($(bmbtn).hasClass("geo2022")){
@@ -254,7 +263,7 @@
                         const parentg1 = $(parentg).parent("div");
                         const parentg2 = $(parentg1).parent("div");
                         const geobox = $(parentg2).parent("a");
-                        $(geobox).css('background-color', '#A234FF');
+                        $(geobox).css('background-color', '#ff9000');
                     }
                     // 거제 북마크효과
                     else if($(bmbtn).hasClass("jeju2022")){
@@ -263,7 +272,7 @@
                         const parenth1 = $(parenth).parent("div");
                         const parenth2 = $(parenth1).parent("div");
                         const jejubox = $(parenth2).parent("a");
-                        $(jejubox).css('background-color', '#70FF90');
+                        $(jejubox).css('background-color', '#ff9000');
                     }
                     // 제주 북마크효과
                     else if($(bmbtn).hasClass("nh2022")){
@@ -272,7 +281,7 @@
                         const parenti1 = $(parenti).parent("div");
                         const parenti2 = $(parenti1).parent("div");
                         const nhbox = $(parenti2).parent("a");
-                        $(nhbox).css('background-color', 'red');
+                        $(nhbox).css('background-color', '#ff9000');
                     }
                     // 남해 북마크효과
 

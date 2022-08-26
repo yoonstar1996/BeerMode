@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/mypage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" >
     <style>
         @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
         body{
@@ -34,19 +34,21 @@
             width:100%;
             height: 300px
         }
-        /* .btn-primary{  
-            background-color: #ffc600;
-            color: black;
-            float:right;
-            margin-bottom: 0px !important;
-            
-        } */
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+        }
+        .trash{
+          background-color: transparent;
+          border: 0;
+        }
     </style>
 </head>
 <body>
-    <!-- 네비바, 스크롤탑, 스크롤바 ejs 호출 -->
+<!-- 네비바, 스크롤탑, 스크롤바 ejs 호출 -->
 <%- include("navbar.ejs") %>
-
 <!-- S:상단 배너 -->
 <div class="container-fluid" style="padding: 0px;">
     <div class="row justify-content-center">
@@ -56,7 +58,6 @@
     </div>
   </div>
 <!-- E:상단 배너 -->
-
 <div class="container">
     <div class="row">
       <div class="col-6 g-4">
@@ -66,8 +67,8 @@
             <a href="https://phoenixhnr.co.kr/static/pyeongchang/eating/special/beer-garden" target="_blank"><h5 class="card-title">평창 '한여름밤의 맥주 한잔'</h5></a>
             <span><b>기간</b> : 22-07-22~22-08-31</span><br>
             <span><b>장소</b> : 휘닉스평창 포레스트파크 잔디광장</span> <br>
-            <b>행사내용</b> : 국산생맥주 무제한 & 안주 그리고 라이브 공연!<br>(키즈코너 & 샐러드 코너 운영)<br>
-            <b>참가비</b> : 대인 35,000원 / 소인 9,000원<br>
+            <span><b>행사내용</b> : 국산생맥주 무제한 & 안주 그리고 라이브 공연!<br>(키즈코너 & 샐러드 코너 운영)</span><br>
+            <span><b>참가비</b> : 대인 35,000원 / 소인 9,000원</span><br><button class="trash" onclick="" style="float: right;"><i class="fa-regular fa-trash-can fa-lg"></i></button>
 
           </div>
         </div>
@@ -79,15 +80,11 @@
             <a href="https://beer-festival.kr/" target="_blank" ><h5 class="card-title">2022 고양 프리미엄 맥주축제</h5></a>
             <span><b>기간</b> : 22-08-17~22-08-21</span><br>
             <span><b>장소</b> : 일산 고양꽃전시관</span> <br>
-            <b>행사내용</b> : 시원한 맥주 그리고 다채로운 장르의 공연<br>
-            <b>참가비</b> : 1일권 20,000원 / 전일권 90,000원<br>
+            <span><b>행사내용</b> : 시원한 맥주 그리고 다채로운 장르의 공연</span><br>
+            <span><b>참가비</b> : 1일권 20,000원 / 전일권 90,000원</span><br><br><button class="trash" onclick="" style="float: right;"><i class="fa-regular fa-trash-can fa-lg"></i></button>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container">
-  <div class="row">
     <div class="col-6 g-4">
       <div class="card">
         <img src="/static/img/eventimg/sd2022.png" class="event-img">
@@ -95,8 +92,8 @@
           <a href="http://www.songdobeer.com/beer/" target="_blank"><h5 class="card-title">2022 송도 맥주축제</h5></a>
           <span><b>기간</b> : 22-08-26~22-09-03</span><br>
           <span><b>장소</b> : 송도달빛축제공원</span> <br>
-          <b>행사내용</b> : 무제한 맥주과 다채로운 공연<br>
-          <b>참가비</b> : 현장발권 20만원 / 사전예매시 15만원(본인포함 6인 입장기준)<br>
+          <span><b>행사내용</b> : 무제한 맥주과 다채로운 공연</span><br>
+          <span><b>참가비</b> : 현장발권 20만원 / 사전예매시 15만원(본인포함 6인 입장기준)</span><br><br><button class="trash" onclick="" style="float: right;"><i class="fa-regular fa-trash-can fa-lg"></i></button>
         </div>
       </div>
     </div>
@@ -107,18 +104,28 @@
           <a href="http://www.beerfestgwangju.com/#" target="_blank"><h5 class="card-title">2022 광주 Beer Fest</h5></a>
           <span><b>기간</b> : 22-08-31~22-09-05</span><br>
           <span><b>장소</b> : 김대중컨벤션센터 야외광장</span> <br>
-          <b>행사내용</b> : 여름 더위를 물리쳐줄 맥주는 기본, 다양한 먹거리와 광주 대표 음식<br>
-          <b>참가비</b> : 입장료 무료<br>
+          <span><b>행사내용</b> : 여름 더위를 물리쳐줄 맥주는 기본, 다양한 먹거리와 광주 대표 음식</span><br>
+          <span><b>참가비</b> : 입장료 무료</span><br><br><button class="trash" onclick="" style="float: right;"><i class="fa-regular fa-trash-can fa-lg"></i></button>
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
-</div>
     <br>
     <br>
-    <%-include("footer.ejs") %>
-  
+<%-include("footer.ejs") %>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+crossorigin="anonymous"></script>
+<script>
+ $(".trash").click(function(){
+  var del = $(this);
+  var up1 = $(del).parent("div");
+  var up2 = $(up1).parent("div");
+  var up3 = $(up2).parent("div");
+  $(up3).addClass("d-none");
+
+ })
+</script>
 </body>
 </html>
