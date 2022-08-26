@@ -28,6 +28,10 @@ app.get("/mypage", (req, res) => {
     res.render("mypage");
 })
 
+app.get("/bookmark", (req, res) => {
+    res.render("bookMark");
+})
+
 app.get("/logout", (req, res) => {
     res.render("logout");
 })
