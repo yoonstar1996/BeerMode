@@ -62,12 +62,12 @@
                             else if(eventObj.extendedProps.class == "nh2022"){
                                 $('#calendar_event8').modal('show')
                             }
-                            // if(($(".bookmark").click)&&($(siblinga).hasClass("pc2022"))){                                  
                             },
+                            // if(($(".bookmark").click)&&($(siblinga).hasClass("pc2022"))){                                  
+                            // },
                     events: [
                     {  
                         class :'pc2022',
-                        id : 'pcbox',
                         title: "평창 '한여름밤의 맥주 한 잔' 알펜시아 비어가든",
                         fee : "대인 35,000원, 소인 9,000원",
                         about : "국산생맥주 무제한 & 안주 그리고 라이브 공연!(키즈코너 & 샐러드 코너 운영)",
@@ -76,7 +76,8 @@
                         textColor : "black",
                         color: "#ffc600",           
                         start: '2022-07-22 00:00:00',            
-                        end: '2022-08-31 24:00:00'                     
+                        end: '2022-08-31 24:00:00',
+                        src: "/static/img/eventimg/pc2022.jpg"                     
                     },
                     {            
                         class : 'jj2022',  
@@ -193,7 +194,7 @@
                     Swal.fire({
                         icon: 'success',
                         title: '정상적으로 북마크되었습니다.',
-                        text: '북마크된 일정은 my page에서 확인하실 수 있습니다 :)'
+                        text: '북마크된 일정은 BOOK MARK에서 확인하실 수 있습니다 :)'
                     })
                     var bmbtn = $(this);
                     // bmbtn = bookmarkbutton
@@ -202,15 +203,89 @@
                     var siblinga = $(parenta).siblings(".modal-body");
                     var modalText = $(siblinga).text();
                     console.log(modalText);
-                    // if($(siblinga).hasClass("pc2022")){
-                    //    $(".pcbox").addClass("bookmarked")
-                    // }     
+                    if($(bmbtn).hasClass("pc2022")){
+                        const pc = $('div:contains("평창")');
+                        const parentb = $(pc).parent("div");
+                        const parentb1 = $(parentb).parent("div");
+                        const pcbox = $(parentb1).parent("a");
+                        $(pcbox).css('background-color', '#FF87F9');
+                        // $(pcbox).css('border-color', 'red', ).css('border-width', '5px');
+                    }
+                    // 평창 북마크효과
+                    else if($(bmbtn).hasClass("jj2022")){
+                        const jj = $('div:contains("전주")');
+                        const parentc = $(jj).parent("div");
+                        const parentc1 = $(parentc).parent("div");
+                        const parentc2 = $(parentc1).parent("div");
+                        const jjbox = $(parentc2).parent("a");
+                        $(jjbox).css('background-color', '#3EA3FF');
+                    }
+                    // 전주 북마크 효과
+                    else if($(bmbtn).hasClass("gy2022")){
+                        const gy = $('div:contains("고양")');
+                        const parentd = $(gy).parent("div");
+                        const parentd1 = $(parentd).parent("div");
+                        const parentd2 = $(parentd1).parent("div");
+                        const gybox = $(parentd2).parent("a");
+                        $(gybox).css('background-color', '#FF2BF4'); 
+                    }
+                    // 고양 북마크효과
+                    else if($(bmbtn).hasClass("gj2022")){
+                        const gj= $('div:contains("광주")');
+                        const parente = $(gj).parent("div");
+                        const parente1 = $(parente).parent("div");
+                        const parente2 = $(parente1).parent("div");
+                        const gjbox = $(parente2).parent("a");
+                        $(gjbox).css('background-color', '#ed8f33');
+                    }
+                    // 광주 북마크효과
+                    else if($(bmbtn).hasClass("sd2022")){
+                        const sd = $('div:contains("송도")');
+                        const parentf = $(sd).parent("div");
+                        const parentf1 = $(parentf).parent("div");
+                        const parentf2 = $(parentf1).parent("div");
+                        const sdbox = $(parentf2).parent("a");
+                        $(sdbox).css('background-color', 'red');
+                    }
+                    // 송도 북마크효과
+                    else if($(bmbtn).hasClass("geo2022")){
+                        const geo = $('div:contains("거제")');
+                        const parentg = $(geo).parent("div");
+                        const parentg1 = $(parentg).parent("div");
+                        const parentg2 = $(parentg1).parent("div");
+                        const geobox = $(parentg2).parent("a");
+                        $(geobox).css('background-color', '#A234FF');
+                    }
+                    // 거제 북마크효과
+                    else if($(bmbtn).hasClass("jeju2022")){
+                        const jeju = $('div:contains("제주")');
+                        const parenth = $(jeju).parent("div");
+                        const parenth1 = $(parenth).parent("div");
+                        const parenth2 = $(parenth1).parent("div");
+                        const jejubox = $(parenth2).parent("a");
+                        $(jejubox).css('background-color', '#70FF90');
+                    }
+                    // 제주 북마크효과
+                    else if($(bmbtn).hasClass("nh2022")){
+                        const nh = $('div:contains("남해")');
+                        const parenti = $(nh).parent("div");
+                        const parenti1 = $(parenti).parent("div");
+                        const parenti2 = $(parenti1).parent("div");
+                        const nhbox = $(parenti2).parent("a");
+                        $(nhbox).css('background-color', 'red');
+                    }
+                    // 남해 북마크효과
+
                     
                     
                 });
             })
         </script>
         <style>
+            @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+            body{
+            font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+            }
             #calendarBox{
                 width: 80%;
                 padding:0%;
@@ -218,9 +293,9 @@
                 margin-right: 10%;
                 margin-top: 15px;
             }
-            .bookmarked{
+            /* .bookmarked{
                 background-color: green;
-            }
+            } */
             .fc-event-title, .fc-event-main{
                 cursor: pointer;
             }
@@ -296,11 +371,14 @@
             }
 /* 이상 모바일 환경 반응형 */
 
-            .fc-daygrid, .fc-daygrid-day-frame, .fc-col-header, .fc-scrollgrid-sync-inner, .fc-header-toolbar{
+            .fc-daygrid, .fc-daygrid-day-frame, .fc-col-header, .fc-scrollgrid-sync-inner, .fc-header-toolbar, .fc-daygrid-block-event{
                 border: 1px solid black !important;
                 border-spacing: 0px 0px !important;
                 border-collapse: collapse !important;
             }
+            /* .fc-daygrid-block-event{
+                border: 0.5px solid black ;
+            } */
             .fc-header-toolbar {
                 background-color: black;
                 margin-bottom:0 !important;
@@ -332,14 +410,14 @@
                 display:block;
             }
             .hidden {
-                background-color: #e9fff5;
+                background-color: #fffae9;
                 text-align: center;
                 align-items: center;
                 width: 500px;
                 height: 130px;
                 overflow: hidden;
                 font-size: 15px;
-                transition: 2s;
+                transition: 1s;
                 margin: auto;
                 align-self: center;
                 font-family: 'Noto Sans', sans-serif;
@@ -391,7 +469,7 @@
             </div>
         </div>
     </div>
-        <!-- Modal2-부산 -->
+        <!-- Modal2-전주 -->
     <div class="modal fade" id="calendar_event2" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -401,7 +479,7 @@
                         <span>&times;</span>
                     </button> -->
                 </div>
-                <div class="modal-body jj2022">
+                <div class="modal-body ">
                     <b>행사명</b> : 2022 전주 가맥축제 <br>
                     <b>장소</b> : 전주 종합경기장 내 야구장 <br>
                     <b>행사내용</b> : 가맥문화를 만나고, 오늘 만든 맥주를 오늘 마실 수 있는 유일한 축제<br>
@@ -409,7 +487,7 @@
                     <a href="http://www.gamaek.co.kr/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark jj2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -435,7 +513,7 @@
                     <a href="https://beer-festival.kr" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark gy2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -461,7 +539,7 @@
                     <a href="http://www.beerfestgwangju.com/#" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark gj2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -487,7 +565,7 @@
                     <a href="http://www.songdobeer.com/beer/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark sd2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -513,7 +591,7 @@
                     <a href="https://2022gbf.modoo.at/" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark geo2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -539,7 +617,7 @@
                     <a href="https://m.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013707" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark jeju2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -565,7 +643,7 @@
                     <a href="https://www.namhae.go.kr/tour/00009/00953.web?amode=view&idx=19" target="_blank">관련링크</a> <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-first bookmark">
+                    <button type="button" class="btn btn-first bookmark nh2022">
                         <span>북마크</span>
                     </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -585,9 +663,9 @@
     })
       
     </script>
-    <script src="https://cdn.jsdelivr.nenpm/bootstrap@5.2.0/dist/js/bootstrabundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.nenpm/bootstrap@5.2.0/dist/js/bootstrabundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jXa"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
     </body>
 </html>
