@@ -37,7 +37,9 @@ body {
 
 .card-rating {
   color: #ffc600;
-  text-decoration: underline rgb(200, 200, 200);
+  /* text-decoration: underline rgb(200, 200, 200); */
+  
+  
 }
 
 .card-comment {
@@ -48,4 +50,28 @@ body {
 
 .card-date {
   margin: 0;
+}
+
+#rating-form fieldset{
+  /* display: inline-block; */
+  direction: rtl;
+  border: 0;
+}
+#rating-form input[type=radio]{
+  display: none;
+}
+#rating-form label{
+  font-size: 0.9em;
+  letter-spacing: -2px;
+  color: transparent;
+  text-shadow: 0 0 0 #f0f0f0;
+}
+#rating-form label:hover{
+  text-shadow: 0 0 0 #ffc600;
+}
+#rating-form label:hover ~ label{
+  text-shadow: 0 0 0 #ffc600;
+}
+#rating-form input[type=radio]:checked ~ label{
+  text-shadow: 0 0 0 #ffc600;
 }

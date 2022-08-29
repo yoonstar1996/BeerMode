@@ -32,6 +32,12 @@
   </div>
   <!-- E:상단 배너 -->
 
+  <p style="font-style: italic; text-align: center;">
+    <a>"맥주를 마시고 난 뒤에야 이전에 실망했던 기억이 떠오른다면?"</a>
+    <br>
+    <a>"긴 시간이 지나기 전에 기록해두자!"</a>
+  </p>
+
   <!-- S:정렬, 필터 -->
   <div class="container-fluid my-3 beer-search" style="padding: 0px;">
     <form class="row justify-content-center">
@@ -43,7 +49,7 @@
           </svg> sort
         </button>
       </div>
-      <input class="col form-control" type="search" placeholder="그 때 마셨던 맥주 이름이 뭐더라?" aria-label="Search"
+      <input class="col form-control" type="search" placeholder="Just type a name" aria-label="Search"
         id="search">
       <div class="col">
         <button class="btn btn-success" type="submit">
@@ -61,7 +67,7 @@
   <div class="container-fluid">
     <div class="card-deck row row-cols-1 row-cols-md-2 g-4 justify-content-center">
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
               <img src="/static/img/beerimg/heineken.jpg" class="img-fluid rounded-start">
@@ -70,7 +76,15 @@
             <div class="col-7">
               <div class="card-body">
                 <div class="col card-name"><a>Heineken</a></div>
-                <h5 class="card-rating">★★★★☆</h5>
+                <h5 class="card-rating">
+                  <!-- ★★★★☆ -->
+                  <!-- <span class="fa-solid fa-beer-mug-empty fa-lg"></span>
+                  <span class="fa-solid fa-beer-mug-empty fa-lg"></span>
+                  <span class="fa-solid fa-beer-mug-empty fa-lg"></span>
+                  <span class="fa-solid fa-beer-mug-empty fa-lg"></span>
+                  <span class="fa-solid fa-beer-mug-empty fa-lg" style="color:rgb(200, 200, 200);"></span> -->
+                  ⭐⭐⭐⭐<span class="d-none">⭐</span>
+                </h5>
                 <p class="card-comment">
                   "적당한 씁쓸한 맛과 조금 단 맛 때문인지 물리지 않고 끝까지 맛을 보며 마시기 좋다. 언제나 실패 없는 안전빵(?)"
                 </p>
@@ -83,16 +97,16 @@
         </div>
       </div>
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
-              <img src="/static/img/beerimg/hoegaarden rosee.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="/static/img/beerimg/hoegaarden rosee.jpg" class="img-fluid rounded-start">
             </div>
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
                 <div class="card-name"><a>Hoegaarden Rosee</a></div>
-                <h5 class="card-rating">★★★★★</h5>
+                <h5 class="card-rating">⭐⭐⭐⭐⭐</h5>
                 <p class="card-comment">
                   "라즈베리 향이 약간 첨가됨. 신기한 마음에 도전해 봄. 기대감이 크지 않아서 그런지 만족. 오히려 자주 먹기에는 ㅎㅎ"
                 </p>
@@ -105,16 +119,18 @@
         </div>
       </div>
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
-              <img src="/static/img/beerimg/asahi.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="/static/img/beerimg/asahi.jpg" class="img-fluid rounded-start">
             </div>
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
                 <div class="col card-name"><a>Asahi</a></div>
-                <h5 class="card-rating">★★☆☆☆</h5>
+                <h5 class="card-rating">
+                  ⭐⭐<span class="d-none">⭐</span><span class="d-none">⭐</span><span class="d-none">⭐</span>
+                </h5>
                 <p class="card-comment">
                   "기대감이 큰 상태로 맛봐서 그런지 실망이 컸던 기억이 남음. 조합을 바꿔서 언젠가 다시 도전해볼까."
                 </p>
@@ -127,16 +143,26 @@
         </div>
       </div>
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
-              <img src="/static/img/beerimg/edelweiss.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="/static/img/beerimg/edelweiss.jpg" class="img-fluid rounded-start">
             </div>
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
                 <div class="col card-name"><a>Edelweiss</a></div>
-                <h5 class="card-rating">★★★★☆</h5>
+                <h5 class="card-rating">
+                  <form name="rating-form" id="rating-form" method="post" action="./save">
+                    <fieldset>
+                      <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+                      <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+                      <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+                      <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+                      <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+                    </fieldset>
+                  </form>
+                </h5>
                 <p class="card-comment">
                   "..."
                 </p>
@@ -149,16 +175,16 @@
         </div>
       </div>
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
-              <img src="/static/img/beerimg/carlsberg.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="/static/img/beerimg/carlsberg.jpg" class="img-fluid rounded-start">
             </div>
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
                 <div class="col card-name"><a>Carlsberg</a></div>
-                <h5 class="card-rating">★★★★☆</h5>
+                <h5 class="card-rating">⭐⭐⭐⭐<span class="d-none">⭐</span></h5>
                 <p class="card-comment">
                   "쓴 맛 싫어하는 사람들이 많이 마신다고 들었음. 가볍게 마시기에 좋았다."
                 </p>
@@ -171,19 +197,17 @@
         </div>
       </div>
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
-              <img src="/static/img/beerimg/budwei.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="/static/img/beerimg/budwei.jpg" class="img-fluid rounded-start">
             </div>
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
                 <div class="col card-name"><a>Budweiser</a></div>
                 <h5 class="card-rating">★★★☆☆</h5>
-                <p class="card-comment">
-                  "기분 좋을 때 먹은 국산 맥주와 큰 차이를 못 느꼈다. 나쁘지는 않음."
-                </p>
+                <h5 class="card-rating">⭐⭐⭐<span class="d-none">⭐</span><span class="d-none">⭐</span></h5>
                 <p class="card-date">
                   <small class="text-muted">2022-06-15</small>
                 </p>
@@ -193,16 +217,16 @@
         </div>
       </div>
       <div class="card-frame col-12 col-sm-10 col-md-5">
-        <div class="card card-shadow h-100 mb-3 justify-content-center">
+        <div class="card card-shadow h-100 justify-content-center">
           <div class="row g-0 align-items-center">
             <div class="col-4">
-              <img src="/static/img/beerimg/guinness.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="/static/img/beerimg/guinness.jpg" class="img-fluid rounded-start">
             </div>
             <div class="vr my-3 text-muted"></div>
             <div class="col-7">
               <div class="card-body">
                 <div class="col card-name"><a>Guinness</a></div>
-                <h5 class="card-rating">★★★★☆</h5>
+                <h5 class="card-rating">⭐⭐⭐⭐<span class="d-none">⭐</span></h5>
                 <p class="card-comment">
                   "..."
                 </p>
