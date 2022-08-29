@@ -29,7 +29,7 @@ app.get("/mypage", (req, res) => {
 })
 
 app.get("/bookmark", (req, res) => {
-    res.render("bookmark");
+    res.render("bookMark");
 })
 
 app.get("/logout", (req, res) => {
