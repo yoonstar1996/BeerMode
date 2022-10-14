@@ -8,16 +8,16 @@
 * 2022.08.16 ~ 2022.08.26
 
 ## 주요 기능
-> main, intro (안수지)
+> Front : main, intro (안수지)
 * 기본적인 홈페이지 소개와 가이드가 나와있다.
 
-> info (윤경민)
+> Front : info (윤경민)
 * 맥주에 대한 정보가 들어있다.
 
 ![beermodeInfo](https://user-images.githubusercontent.com/107985535/195799192-65d97503-d1df-454c-b596-c89388577f5f.gif)
 
-> eventcalendar, bookmark (최원준)
+> Front : eventcalendar, bookmark (최원준)
 * 맥주 관련 행사에 대한 일정이 있다.
 
-> my beer page (최재원)
+> Front : my beer page (최재원)
 * 나의 기록 확인과 검색 기능이 있다.
