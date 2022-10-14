@@ -13,7 +13,6 @@
 
 > info (윤경민)
 * 맥주에 대한 정보가 들어있다.
-* 
 ![beermodeInfo](https://user-images.githubusercontent.com/107985535/195799192-65d97503-d1df-454c-b596-c89388577f5f.gif)
 
 > eventcalendar, bookmark (최원준)
