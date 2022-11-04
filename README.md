@@ -8,7 +8,7 @@
 ## BEER MODE
 * KDT - 1차 프로젝트
 * 2022.08.16 ~ 2022.08.26
-* 사용 기술 : HTML, CSS, JavaScript, jQuery
+* 사용 기술 : CSS, JavaScript, jQuery, node.js, ejs
 
 ## 제작 인원(4명)
 * 안수지, 윤경민, 최원준, 최재원
