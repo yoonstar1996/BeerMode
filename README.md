@@ -6,7 +6,6 @@
 * **BEER MODE는 맥주 정보 제공 사이트이자, 아카이빙 공간입니다.**
 
 ## BEER MODE
-* 포스코 X 코딩온 KDT - 1차 프로젝트
 * 2022.08.16 ~ 2022.08.26
 * 사용 기술 : CSS, JavaScript, jQuery, node.js, ejs
 
